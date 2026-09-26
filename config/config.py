@@ -26,6 +26,9 @@ LLM_MAX_TOKENS = 16000
 # Embedding
 EMBED_MODEL = "BAAI/bge-base-zh-v1.5"
 
+# Google Places（抽取時查 POI 的 place_id、座標、營業時間）
+GOOGLE_PLACES_API_KEY = os.getenv("GOOGLE_PLACES_API_KEY")
+
 # Chroma
 CHROMA_DIR = _path("CHROMA_DIR", "storage/chroma")
 CHROMA_COLLECTION = os.getenv("CHROMA_COLLECTION") or "docs"

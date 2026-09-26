@@ -4,3 +4,6 @@ llama-index-embeddings-huggingface>=0.8.0
 chromadb>=1.5.9
 openai>=3.19.2
 python-dotenv>=1.2.3
+crawl4ai>=0.9.4
+rapidfuzz>=3.14
+opencc>=1.1

@@ -1,5 +1,6 @@
 from collections.abc import Iterator
 from openai import OpenAI
+from pydantic import BaseModel
 from config import config
 
 Messages = list[dict[str, str]]
@@ -27,6 +28,14 @@ class LLMClient:
         for chunk in self._client.chat.completions.create(**self._params(prompt, system), stream=True):
             if chunk.choices and chunk.choices[0].delta.content:
                 yield chunk.choices[0].delta.content
+
+    def parse[T: BaseModel](self, prompt: str | Messages, schema: type[T], system: str | None = None) -> T:
+        """Structured Outputs：回答保證符合 schema（pydantic 模型），直接回傳解析好的物件。"""
+        response = self._client.chat.completions.parse(**self._params(prompt, system), response_format=schema)
+        message = response.choices[0].message
+        if message.parsed is None:
+            raise RuntimeError(f"LLM 沒有回傳結構化結果：{message.refusal or response.choices[0].finish_reason}")
+        return message.parsed
 
     def _params(self, prompt: str | Messages, system: str | None) -> dict:
         messages = [{"role": "user", "content": prompt}] if isinstance(prompt, str) else list(prompt)

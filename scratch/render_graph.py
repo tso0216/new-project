@@ -2,7 +2,7 @@
 
     python scratch/render_graph.py
 
-節點 = POI，畫成圓圈、圈內數字是 source_count（圈的大小也依它），名稱寫在圈下，顏色依 area；有證據段落的節點加黑框。
+節點 = POI，畫成圓圈、圈內數字是 source_count（圈的大小也依它），名稱寫在圈下，
 同一對景點的多條邊（多次觀測）合併成一條，粗細依觀測次數，顏色依 mode，推測的交通方式畫虛線。
 點節點或邊，右側會列出原始觀測、證據與出處。
 """
@@ -15,28 +15,19 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 
 MODE_COLOR = {"自駕": "#4a7fd6", "走路": "#3aa36b", "大眾運輸": "#d9822b", None: "#999999"}
-AREA_PALETTE = ["#e15759", "#4e79a7", "#f28e2b", "#76b7b2", "#59a14f", "#edc948",
-                "#b07aa1", "#ff9da7", "#9c755f", "#bab0ac"]
+NODE_COLOR = "#4e79a7"
 
 
 def build():
     nodes = json.loads((DATA / "node.json").read_text())
     edges = json.loads((DATA / "edge.json").read_text())
 
-    area_count = defaultdict(int)
-    for n in nodes:
-        area_count[n["area"]] += 1
-    top_areas = sorted(area_count, key=lambda a: -area_count[a])[: len(AREA_PALETTE) - 1]
-    area_color = {a: AREA_PALETTE[i] for i, a in enumerate(top_areas)}
-    other = AREA_PALETTE[-1]
-
     vis_nodes = [{
         "id": n["poi_id"],
         "label": n["poi_name"],
-        "color": area_color.get(n["area"], other),
-        "has_ev": bool(n["evidence"]),
+        "color": NODE_COLOR,
         "count": n["source_count"],
-        "title": f'{n["poi_name"]}｜{n["area"]}｜{n["category"]}｜{n["source_count"]} 個來源',
+        "title": f'{n["poi_name"]}｜{n["source_count"]} 個來源',
         "raw": n,
     } for n in nodes]
 
@@ -47,7 +38,6 @@ def build():
     vis_edges = []
     for (src, dst, mode), obs in merged.items():
         inferred = all(o["mode_inferred"] for o in obs)
-        has_ev = any(o["evidence"] for o in obs)
         vis_edges.append({
             "id": "|".join(o["edge_id"] for o in obs),
             "from": src, "to": dst,
@@ -56,7 +46,7 @@ def build():
             "color": MODE_COLOR.get(mode, MODE_COLOR[None]),
             "dashes": inferred,
             "width": 2 + 2 * (len(obs) - 1),
-            "title": f'{mode or "未知"}｜{len(obs)} 次觀測' + ("（推測）" if inferred else "") + ("｜有證據" if has_ev else ""),
+            "title": f'{mode or "未知"}｜{len(obs)} 次觀測' + ("（推測）" if inferred else ""),
             "raw": obs,
         })
 
@@ -65,7 +55,7 @@ def build():
         "trips": len({e["trip_id"] for e in edges}),
         "isolated": len({n["poi_id"] for n in nodes} - {e["from"]["poi_id"] for e in edges} - {e["to"]["poi_id"] for e in edges}),
     }
-    legend = {"area": area_color, "other": other, "mode": {k or "未知": v for k, v in MODE_COLOR.items()}}
+    legend = {"mode": {k or "未知": v for k, v in MODE_COLOR.items()}}
     html = TEMPLATE.replace("__DATA__", json.dumps(
         {"nodes": vis_nodes, "edges": vis_edges, "stats": stats, "legend": legend}, ensure_ascii=False))
     out = ROOT / "scratch" / "graph.html"
@@ -112,9 +102,7 @@ const byId = Object.fromEntries(D.nodes.map(n => [n.id, n]));
 document.getElementById("stats").textContent =
   `${D.stats.nodes} 節點・${D.stats.edges} 條觀測邊（合併後 ${D.stats.merged_edges}）・${D.stats.trips} 個行程・孤立節點 ${D.stats.isolated}`;
 document.getElementById("leg").innerHTML =
-  Object.entries(D.legend.area).map(([a,c]) => `<span><i class="sw" style="background:${c}"></i>${esc(a)}</span>`).join("")
-  + `<span><i class="sw" style="background:${D.legend.other}"></i>其他地區</span><br>`
-  + Object.entries(D.legend.mode).map(([m,c]) => `<span><i class="ln" style="border-color:${c}"></i>${esc(m)}</span>`).join("");
+  Object.entries(D.legend.mode).map(([m,c]) => `<span><i class="ln" style="border-color:${c}"></i>${esc(m)}</span>`).join("");
 
 // 圓圈＋圈內數字＋圈下名稱
 const radius = n => 10 + 5 * Math.sqrt(n.count - 1);
@@ -124,7 +112,7 @@ function drawPoi({ctx, id, x, y, state: {selected, hover}}) {
     drawNode() {
       ctx.beginPath(); ctx.arc(x, y, r, 0, 2 * Math.PI);
       ctx.fillStyle = n.color; ctx.fill();
-      ctx.lineWidth = n.has_ev ? 3 : 1.5; ctx.strokeStyle = n.has_ev ? "#222" : "#fff"; ctx.stroke();
+      ctx.lineWidth = 1.5; ctx.strokeStyle = "#fff"; ctx.stroke();
       if (selected || hover) { ctx.beginPath(); ctx.arc(x, y, r + 4, 0, 2 * Math.PI); ctx.lineWidth = 2; ctx.strokeStyle = "#2a6fdb"; ctx.stroke(); }
       ctx.textAlign = "center"; ctx.textBaseline = "middle";
       ctx.font = `bold ${Math.round(r * .9 + 4)}px -apple-system,sans-serif`; ctx.fillStyle = "#fff";
@@ -158,19 +146,14 @@ const net = new vis.Network(document.getElementById("net"), {nodes: nv, edges: e
   interaction: {hover: true},
 });
 
-const evHtml = list => (list || []).map(x => typeof x === "string"
-  ? `<div class="ev">${esc(x)}</div>`
-  : `<div class="ev"><b>${esc(x.kind)}</b> ${esc(x.text)}<br>${link(x.url)}</div>`).join("");
 const detail = document.getElementById("detail");
 function showNode(id) {
   const n = byId[id].raw;
   const deg = D.edges.filter(e => e.from === n.poi_id || e.to === n.poi_id).length;
   detail.innerHTML = `<b style="font-size:15px">${esc(n.poi_name)}</b> <span class="muted">${n.poi_id}</span><br>
-    ${esc(n.area)}・${esc(n.category)}・${n.source_count} 個來源・${deg} 條相連邊<br>
-    ${n.aliases.length ? "別名：" + esc(n.aliases.join("、")) + "<br>" : ""}
-    月份：${n.months.join(", ") || "—"}・停留：${n.duration ?? "—"}・營業時間：${esc(JSON.stringify(n.hours))}<br>
+    ${n.source_count} 個來源・${deg} 條相連邊<br>
+    月份：${n.months.join(", ") || "—"}・停留：${n.duration ?? "—"}<br>
     座標：${n.lat ?? "—"}, ${n.lon ?? "—"}
-    <h3>證據（${n.evidence.length}）</h3>${evHtml(n.evidence) || '<span class="muted">無</span>'}
     <h3>觀測（${n.observations.length}）</h3>` +
     n.observations.map(o => `<div class="obs">${esc(o.trip_id)}・${esc(o.name_raw)}・${esc(o.visit_type ?? "")}・月份 ${o.months.join(",")}</div>`).join("") +
     `<h3>來源</h3>` + n.url.map(u => `<div>${link(u)}</div>`).join("");
@@ -181,14 +164,14 @@ function showEdge(id) {
     e.raw.map(o => `<div class="obs"><b>${o.edge_id}</b> ${esc(o.trip_id)}・第 ${o.day} 天第 ${o.seq} 段・${esc(o.source_type)}<br>
       ${esc(o.from.name_raw)} → ${esc(o.to.name_raw)}<br>
       交通：${esc(o.mode ?? "未知")}${o.vehicle ? "（" + esc(o.vehicle) + "）" : ""}${o.mode_inferred ? ' <span class="muted">推測：' + esc(o.mode_basis) + "</span>" : ""}<br>
-      時間：${o.duration_min ?? "—"} 分・距離：${o.distance_km ?? "—"} km${o.via.length ? "<br>途經：" + esc(o.via.join("、")) : ""}
-      ${evHtml(o.evidence)}${link(o.url)}</div>`).join("");
+      時間：${o.duration_min ?? "—"} 分${o.via.length ? "<br>途經：" + esc(o.via.join("、")) : ""}
+      ${link(o.url)}</div>`).join("");
 }
 net.on("click", p => { if (p.nodes.length) showNode(p.nodes[0]); else if (p.edges.length) showEdge(p.edges[0]); });
 document.getElementById("q").onkeydown = e => {
   if (e.key !== "Enter") return;
   const q = e.target.value;
-  const hit = D.nodes.find(n => n.label.includes(q) || (n.raw.aliases || []).some(a => a.includes(q)));
+  const hit = D.nodes.find(n => n.label.includes(q));
   if (hit) { net.selectNodes([hit.id]); net.focus(hit.id, {scale: 1.4, animation: true}); showNode(hit.id); }
 };
 </script></body></html>
