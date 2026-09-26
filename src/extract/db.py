@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS nodes (
   maps_uri         TEXT,
   rating_count     INTEGER,
   google_query     TEXT,
+  resolved_by      TEXT,               -- api / manual（人工查詢：只有 place_id、名稱、座標，其他之後再補）
   resolved_at      TEXT
 );
 

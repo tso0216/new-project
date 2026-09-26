@@ -9,7 +9,7 @@
 | # | 決策 |
 |---|---|
 | 1 | POI 對應順序：別名完全比對 → 模糊比對 → embedding → Google Places。前三步先擋，目的是減少 API 呼叫 |
-| 2 | 景點粒度由 Google Places 決定（place_id 相同就是同一個節點） |
+| 2 | 景點粒度由 Google Places 決定（place_id 相同就是同一個節點）。同一站拆成多個 node 時，LLM 依原文順序相連；Google 判成同一地點的，A→A 的邊丟掉 |
 | 3 | 一次 LLM 呼叫同時輸出 nodes 與 edges；poi_id 是「文章內暫時編號」，對應資料庫的工作由程式在 LLM 之後做 |
 | 4 | 座標、營業時間等外部資料只由程式寫入資料庫，不出現在提示詞 |
 | 5 | `months` 一律由 LLM 判斷（不是每家旅行社都會把出團月份寫進 front matter），在**文章層級**輸出一次，程式再套到每條邊與每筆 observation |
@@ -53,26 +53,30 @@ data/raw/<source>/<trip_id>.md
 
 | 檔案 | 內容 |
 |---|---|
-| `src/extract/per_article.py` | 入口，串起整個流程 |
+| `src/extract/main.py` | 入口：解析 `data/raw/` 裡還沒解析的文章，成功的移到 `data/parsed/<來源>/` |
+| `src/extract/per_article.py` | 解析一篇文章：LLM 抽取、驗證與重試、POI 對應、寫庫 |
 | `src/extract/per_article_prompt.md` | 提示詞（改版，見 §5） |
+| `src/extract/article.py` | 讀 front matter 與內文；`source` → `source_type` 對照表 |
 | `src/extract/schema.py` | LLM 輸出的 pydantic 模型（同時產生給 Structured Outputs 的 JSON Schema） |
 | `src/extract/validate.py` | 內容驗證；也可以單獨執行，檢查一份既有的 LLM 輸出 |
 | `src/extract/resolve.py` | POI 對應：正規化、別名、模糊比對、embedding、呼叫 Google |
 | `src/extract/places.py` | Google Places API（New）Text Search |
+| `src/extract/manual.py` | 暫定的人工查詢模式，取代 `places.py` |
 | `src/extract/db.py` | SQLite 建表與讀寫 |
 | `src/extract/export.py` | `graph.db` → `data/node.json`、`data/edge.json`（人工檢查、`scratch/render_graph.py` 用） |
 
 指令：
 
 ```bash
-python src/extract/per_article.py data/raw/colatour/colatour_246129.md   # 單篇
-python src/extract/per_article.py data/raw/colatour/                     # 整個資料夾
-python src/extract/per_article.py data/raw/colatour/ --force             # 已處理過的也重跑
-python src/extract/validate.py <llm輸出.json> <文章.md>                   # 單獨檢查一份輸出
-python src/extract/export.py                                             # 匯出 JSON
+python src/extract/main.py                                  # 解析 data/raw/ 裡所有還沒解析的文章
+python src/extract/main.py --manual                         # 暫定模式：查景點改成人工查（§9.1）
+python src/extract/validate.py <llm輸出.json> <文章.md>      # 單獨檢查一份輸出
+python src/extract/export.py                                # 匯出 JSON
 ```
 
-已處理過的判斷：`articles` 表裡有同一個 trip_id 且檔案內容 hash 沒變 → 跳過。重跑時先刪掉該篇舊的 observations 與 edges 再寫入（節點與別名保留）。
+哪些還沒解析：解析成功的文章會從 `data/raw/<來源>/` 移到 `data/parsed/<來源>/`，所以 `data/raw/` 裡剩下的就是還沒解析的。
+失敗的留在 `data/raw/`，下次執行再試。要重新解析某篇，就把它從 `data/parsed/` 移回 `data/raw/`；
+同一個 trip_id 重新寫入時，先刪掉舊的文章、observations 與 edges（節點與別名保留）。
 
 ---
 
@@ -127,6 +131,7 @@ python src/extract/export.py                                             # 匯�
 - 刪掉已改由程式、Google 填的欄位與相關規則（lat/lon、duration、各處 months、source_count、url、trip_id、edge_id、seq、source_type）。
 - 新增文章層級的 `months` 規則。
 - 新增規則：原文**並列**的景點分開輸出，不要合併；是否合併交給後續處理。
+- 新增規則：只建行程裡實際去的景點；observations 一次造訪記一筆。
 - 使用 Structured Outputs 時，「輸出格式」一節只保留一句說明，細節交給 schema；不支援時保留目前的格式規則與自我檢查清單。
 - 保留：什麼算景點、建邊規則（同日相鄰、不跨天、不用建議清單建邊）、交通方式判斷順序。
 
@@ -237,7 +242,7 @@ python src/extract/export.py                                             # 匯�
   重生的輸出重新走 ③ 驗證與 ④ 解析。為了不重複花 API 費用：
   - 這篇處理期間，Google 的查詢結果（包括查無結果）暫存在記憶體，同一個名稱不再查第二次。
   - 解析結果先不寫資料庫，整篇通過才在 ⑥ 一起寫入。
-  - 重試上限見 §14。
+  - 重試上限 2 次（和驗證失敗分開計算）。用完仍查不到 → 丟掉該 node 與相關的邊，其餘照常寫入，丟掉的名稱記在 `data/extract_failures/<trip_id>.json`。
 
 ### 8.6 記錄
 
@@ -270,6 +275,20 @@ python src/extract/export.py                                             # 匯�
 
 ---
 
+### 9.1 暫定模式：人工查詢（`--manual`）
+
+還沒有 API 金鑰時使用，只把「查 Google」這一步換成人工，其他流程不變。
+
+- 解析到需要查的景點時暫停，印出景點名稱、原文寫法、文章標題、Google 地圖搜尋連結、Place ID Finder 連結。
+- 每個景點貼兩樣：
+  1. **place_id**：在 [Place ID Finder](https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder) 搜尋後複製，當節點的唯一 ID（和之後的 API 相容）。
+  2. **Google 地圖網址**：在 Google 地圖點開景點後複製網址列；程式從網址取出名稱與座標（優先用 `!3d…!4d…` 的景點座標；分享用的短網址會先展開）。
+- place_id 直接按 Enter＝查不到，照一般規則丟回 LLM；同一個名稱在這次執行內不會再問第二次。
+- 格式不對會要求重貼；按 Ctrl+C 中斷時，正在處理的那篇還原、留在 `data/raw/`，已完成的保留。
+- 人工查的節點 `resolved_by = "manual"`，只有 place_id、名稱、座標、地圖網址；營業時間等之後有金鑰再用 place_id 補。
+
+---
+
 ## 10. SQLite 結構（`data/graph.db`）
 
 ```sql
@@ -290,6 +309,7 @@ CREATE TABLE nodes (
   maps_uri         TEXT,
   rating_count     INTEGER,
   google_query     TEXT,
+  resolved_by      TEXT,               -- api / manual
   resolved_at      TEXT
 );
 
@@ -309,8 +329,7 @@ CREATE TABLE articles (
   source_type   TEXT,
   url           TEXT,
   title         TEXT,
-  path          TEXT,
-  content_hash  TEXT,
+  path          TEXT,                  -- 解析完移到 data/parsed/ 後的位置
   months        TEXT,                  -- JSON 陣列，LLM 判斷
   llm_model     TEXT,
   attempts      INTEGER,               -- 用了幾次 LLM 呼叫
@@ -367,7 +386,7 @@ sentence-transformers、numpy、httpx、pydantic、networkx 已安裝。
 | 階段 | 內容 | 完成的判斷 |
 |---|---|---|
 | 1 | `schema.py`、提示詞改版、LLM 呼叫、`validate.py`、重試；輸出先存成 JSON，不碰資料庫 | 5 篇 colatour 都通過驗證，記錄每篇重試次數 |
-| 2 | `db.py` 建表、寫入；`--force` 重跑 | 重跑同一篇，資料不重複 |
+| 2 | `db.py` 建表、寫入；解析完移到 `data/parsed/` | 重跑同一篇，資料不重複 |
 | 3 | `resolve.py` 正規化、別名、模糊比對、embedding；Google 先不接，沒命中的名稱先列出來 | 5 篇跑完，列出所有模糊比對與 embedding 命中，人工檢查 |
 | 4 | `places.py` 接 Google | 統計 API 呼叫次數；檢查 place_id 合併結果 |
 | 5 | `export.py`；更新 `node.json.sample`、`edge.json.sample` 為匯出格式；確認 `scratch/render_graph.py` 能讀 | 瀏覽器看得到圖 |
@@ -389,12 +408,13 @@ sentence-transformers、numpy、httpx、pydantic、networkx 已安裝。
 
 ## 14. 已確認
 
-- `data/graph.db`、`data/raw/`、`data/extract_failures/` 不進 git（已加進 `.gitignore`）。
+- `data/graph.db`、`data/raw/`、`data/parsed/`、`data/extract_failures/` 不進 git（已加進 `.gitignore`）。
 - 不另外呼叫 Google 取日文名稱。
 - Google 查無結果 → 丟回 LLM 重生（§8.5）。
 - 不加文章層級的 `region`，Google 只用 `poi_name` 查。
-
-## 15. 待確認
-
-1. 並列景點（例如「淺草寺（雷門）」）拆成兩個 node 之後，前後的邊怎麼接。
-2. Google 查無結果時的重試上限，以及用完重試仍查不到時怎麼處理。
+- 入口是 `src/extract/main.py`，每次只解析 `data/raw/` 裡還沒解析的文章，解析完移到 `data/parsed/<來源>/`。
+- 同一站拆成多個 node 時的邊：照一般規則依原文順序相連，交給 Google 決定是不是同一地點（同一個 place_id → 合併，A→A 的邊丟掉）。
+- Google 查無結果：丟回 LLM 重生最多 2 次，仍查不到就丟掉該 node 與相關的邊。
+- 要有行程的景點才建節點：只出現在介紹、建議清單裡的不建；程式也會丟掉沒有任何邊的景點（在查 Google 之前先濾掉；丟掉查不到的景點後變成沒有邊的，也一併不建）。
+- observations 一次造訪記一筆：行程概要、景點介紹重複提到同一次造訪不另外記，但可以用那裡的資訊填欄位。
+- Google 查不到的名稱不記進資料庫（很少遇到，之後別篇再出現就再丟回 LLM）。

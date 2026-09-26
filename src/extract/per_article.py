@@ -33,6 +33,7 @@ class Result:
     edges: int = 0
     attempts: int = 0
     dropped: list[str] = field(default_factory=list)  # Google 重試用完仍查不到、被丟掉的景點
+    unlinked: list[str] = field(default_factory=list)  # 沒有任何邊（不是行程裡實際去的）而不建的景點
 
 
 def _numbered(lines: list[str]) -> str:
@@ -49,6 +50,7 @@ def process_article(path: Path, parsed_path: str, conn, resolver: Resolver, llm:
                 {"role": "user", "content": path.read_text(encoding="utf-8")}]
     result = Result()
     resolver.created = []
+    resolver.context = f"{trip_id}｜{meta.get('title')}"
     invalid_retries = unresolved_retries = 0
 
     while True:
@@ -66,10 +68,13 @@ def process_article(path: Path, parsed_path: str, conn, resolver: Resolver, llm:
                              "你上一次的輸出有以下問題，請修正後輸出完整 JSON（不要只輸出修改的部分）：\n" + _numbered(errors)})
             continue
 
+        # 要有行程（連著邊）的景點才建節點；先濾掉，也省下查 Google 的費用
+        linked = {e.from_ for e in ext.edges} | {e.to for e in ext.edges}
+        nodes = [n for n in ext.nodes if n.poi_id in linked]
         # 被多個 node 共用的 name_raw（例如沒拆乾淨的「城崎海岸、門脇吊橋」）不拿來比對別名，以免把別的景點併進來
         raw_count = Counter(raw for n in ext.nodes for raw in {o.name_raw for o in n.observations})
         matches, unresolved = {}, []
-        for n in ext.nodes:
+        for n in nodes:
             raws = sorted({o.name_raw for o in n.observations if raw_count[o.name_raw] == 1})
             if (m := resolver.resolve(n, trip_id, raws)) is None:
                 unresolved.append(n)
@@ -87,8 +92,7 @@ def process_article(path: Path, parsed_path: str, conn, resolver: Resolver, llm:
         break
 
     result.dropped = [n.poi_name for n in unresolved]
-    observations = [{"node_id": matches[n.poi_id].node_id, **o.model_dump()}
-                    for n in ext.nodes if n.poi_id in matches for o in n.observations]
+    result.unlinked = [n.poi_name for n in ext.nodes if n.poi_id not in linked]
 
     # 改寫成資料庫的 node_id；丟掉連到查無結果景點的邊，以及兩端被判成同一地點的邊；seq 每天從 1 重編
     edges, seq = [], defaultdict(int)
@@ -102,12 +106,17 @@ def process_article(path: Path, parsed_path: str, conn, resolver: Resolver, llm:
         edges.append({**e.model_dump(by_alias=False, exclude={"from_", "to"}),
                       "from_node": src, "to_node": dst, "seq": seq[e.day]})
 
+    # 丟掉邊之後沒有邊可連的景點也不建（例如 A → X → B 的 X 查不到，A、B 又沒有別的邊）
+    used = {e["from_node"] for e in edges} | {e["to_node"] for e in edges}
+    observations = [{"node_id": matches[n.poi_id].node_id, **o.model_dump()}
+                    for n in nodes if n.poi_id in matches and matches[n.poi_id].node_id in used for o in n.observations]
+
     article |= {"months": json.dumps(ext.months), "llm_model": llm.model, "attempts": result.attempts,
                 "llm_output": output, "extracted_at": db.now()}
     db.replace_article(conn, article, observations, edges)
     db.delete_orphan_nodes(conn, resolver.created)
 
-    result.nodes = len({m.node_id for m in matches.values()})
-    result.new_nodes = len({m.node_id for m in matches.values()} & set(resolver.created))
+    result.nodes = len(used)
+    result.new_nodes = len(used & set(resolver.created))
     result.edges = len(edges)
     return result

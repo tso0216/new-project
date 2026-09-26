@@ -3,9 +3,11 @@
 依序：別名完全比對 → 模糊比對 → embedding → Google Places。前三步是為了少呼叫 API；
 門檻刻意設嚴（寧可交給 Google），因為合錯了之後同名稱都會跟著錯，而且很難發現。
 Google 回傳的 place_id 已在資料庫 → 用既有節點；否則建新節點。命中後把名稱存成別名，下次直接完全比對命中。
+「查 Google」這一步由呼叫端傳入：places.search（API）或 manual.search（人工查詢模式）。
 """
 import re
 import unicodedata
+from collections.abc import Callable
 from dataclasses import dataclass
 
 import numpy as np
@@ -13,7 +15,7 @@ import opencc
 from rapidfuzz import fuzz, process
 
 from config import config
-from extract import db, places
+from extract import db
 from extract.schema import Node
 
 FUZZY_MIN = 90     # rapidfuzz fuzz.ratio（0–100）
@@ -41,11 +43,17 @@ class Match:
     score: float | None
 
 
+# (查詢字串, 給人看的提示) → nodes 表的欄位；查無結果回傳 None
+Search = Callable[[str, str], dict | None]
+
+
 class Resolver:
-    def __init__(self, conn):
+    def __init__(self, conn, search: Search):
         self.conn = conn
-        self.google_cache: dict[str, dict | None] = {}  # 這次執行內查過的名稱（含查無結果）不再查
-        self.google_calls = 0
+        self.search = search
+        self.search_cache: dict[str, dict | None] = {}  # 這次執行內查過的名稱（含查無結果）不再查
+        self.lookups = 0
+        self.context = ""  # 目前這篇文章，人工查詢時顯示
         self.created: list[int] = []  # 這篇新建的節點，寫完文章後清掉沒被用到的
         self._model = None
 
@@ -78,7 +86,7 @@ class Resolver:
             if sims[i] >= EMBED_MIN:
                 return self._matched(Match(node_ids[i], "embedding", float(sims[i])), names, trip_id)
 
-        place = self._search(node.poi_name)
+        place = self._search(node)
         if place is None:
             return None
         if (node_id := db.node_by_place_id(self.conn, place["place_id"])) is not None:
@@ -87,11 +95,13 @@ class Resolver:
         self.created.append(node_id)
         return self._matched(Match(node_id, "google", None), names, trip_id)
 
-    def _search(self, query: str) -> dict | None:
-        if query not in self.google_cache:
-            self.google_calls += 1
-            self.google_cache[query] = places.search(query)
-        return self.google_cache[query]
+    def _search(self, node: Node) -> dict | None:
+        query = node.poi_name
+        if query not in self.search_cache:
+            self.lookups += 1
+            raws = "、".join(dict.fromkeys(o.name_raw for o in node.observations))
+            self.search_cache[query] = self.search(query, f"原文：{raws}\n文章：{self.context}")
+        return self.search_cache[query]
 
     def _matched(self, match: Match, names: dict[str, str], trip_id: str) -> Match:
         new = [a for a in names if db.node_by_alias(self.conn, a) is None]

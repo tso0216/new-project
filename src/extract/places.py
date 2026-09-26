@@ -13,8 +13,8 @@ FIELDS = ["id", "displayName", "location", "regularOpeningHours", "utcOffsetMinu
           "primaryType", "types", "formattedAddress", "viewport", "googleMapsUri", "userRatingCount"]
 
 
-def search(query: str) -> dict | None:
-    """回傳第一筆結果整理成 nodes 表的欄位；查無結果回傳 None。"""
+def search(query: str, hint: str = "") -> dict | None:
+    """回傳第一筆結果整理成 nodes 表的欄位；查無結果回傳 None。hint 是給人工查詢模式用的，這裡用不到。"""
     response = httpx.post(SEARCH_URL, timeout=30, headers={
         "X-Goog-Api-Key": config.GOOGLE_PLACES_API_KEY or "",
         "X-Goog-FieldMask": ",".join(f"places.{f}" for f in FIELDS),
@@ -40,4 +40,5 @@ def search(query: str) -> dict | None:
         "viewport": json.dumps(p["viewport"]) if "viewport" in p else None,
         "maps_uri": p.get("googleMapsUri"),
         "rating_count": p.get("userRatingCount"),
+        "resolved_by": "api",
     }

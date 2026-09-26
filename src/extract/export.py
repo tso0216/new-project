@@ -54,6 +54,7 @@ def main():
             "address": r["address"],
             "maps_uri": r["maps_uri"],
             "rating_count": r["rating_count"],
+            "resolved_by": r["resolved_by"],
             "aliases": aliases[r["node_id"]],
             "duration": round(statistics.median(stays)) if stays else None,
             "months": sorted({m for o in observations for m in o["months"]}),
