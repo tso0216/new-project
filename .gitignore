@@ -2,3 +2,7 @@
 __pycache__/
 storage/
 config/.env
+claude.md
+# 旅行社行程：原始頁面與含原文的中間檔不進 git（著作權），只留抽取後的 observations
+data/tour/*/raw/
+data/tour/*/itinerary/

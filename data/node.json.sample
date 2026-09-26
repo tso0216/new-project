@@ -1,0 +1,19 @@
+[
+  {
+    "poi_id": 唯一辨識碼（P001…，定義在 src/extract/poi_rules.py，已發出的不改）,
+    "poi_name": poi名稱,(先加入的為主；先加入的是英日文或錯字時改用中文名)
+    "category": 神社寺廟 | 公園庭園 | 自然景觀 | 商圈老街 | 購物 | 遊船纜車 | 地標展望 | 博物館 | 主題樂園 | 歷史古蹟 | 市場 | 動物園 | 溫泉街 | 餐飲（目的地型）,
+    "area": 人工標註的粗略地區（東京、富士五湖、箱根…）,
+    "aliases": [各來源原文裡指向這個 poi 的其他名稱],
+    "lat": 緯度 | null（目前只有 Funliday 有座標）,
+    "lon": 經度 | null,
+    "duration": 停留時間（分）| null（duration_samples 的中位數）,
+    "duration_samples": [各遊記記錄的停留分鐘數],
+    "hours": [原文寫的營業時間，例 "⏰09:00-22:00"],
+    "months": [有人在這些月份去（各 observation 的 months 聯集）],
+    "source_count": 出現在幾個行程／遊記,
+    "url": [資料來源],
+    "evidence": [{"text": 逐字原文, "kind": 旅行社注意事項 | 遊記, "url": 來源}],
+    "observations": [{"trip_id", "months": 旅行社＝出團月份、遊記＝實際旅行月份（原文沒寫就是 []）, "name_raw", "visit_type": 入內參觀|下車拍照|行車經過|null, "stay_min", "as_area": 是否由車站／商店推斷成區域}]
+  }
+]

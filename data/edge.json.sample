@@ -1,0 +1,19 @@
+[
+  {
+    "edge_id": 唯一辨識碼（E0001…，每次重建依序編號）,
+    "from": {poi_id:起點poi_id,  poi_name:起點名稱, name_raw:原文寫法, visit_type}
+    "to": {poi_id:終點poi_id, poi_name:終點名稱, name_raw:原文寫法, visit_type}
+    "mode": 大眾運輸(火車、地鐵等) | 自駕(旅行社遊覽車) | 走路 | null
+    "mode_inferred": 交通方式是否為推斷（原文沒寫）,
+    "mode_basis": 交通方式的依據（原文明寫 | 旅行社跟團預設遊覽車 | 同園區步行範圍 | 途經車站 | 遊記起訖點記成車站 | 原文未寫…）,
+    "vehicle": 原文寫的交通工具（銀座線、江之島電鐵…）| null,
+    "duration_min": 原文明寫的移動時間（分）| null,
+    "distance_km": 原文寫的距離（雄獅的「約 N km」，經過略過的點時加總）| null,
+    "via": [兩景點之間被略過的非景點（車站、免稅店、餐廳…）原文名稱],
+    "months": [月份：旅行社＝出團月份、遊記＝實際旅行月份（原文沒寫就是 []）],
+    "trip_id": 行程檔名, "day": 第幾天, "seq": 當天第幾段（trip_id＋day＋seq 可以把邊串回原本那天的路線）,
+    "source_type": 旅行社 | 遊記,
+    "evidence": [逐字原文片段：行程標題中的兩端、遊記中寫交通方式的句子、與前往方式有關的注意事項],
+    "url" 資料來源
+  }
+]

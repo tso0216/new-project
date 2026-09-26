@@ -1,0 +1,3431 @@
+[
+  {
+    "edge_id": "E0001",
+    "from": {
+      "poi_id": "P001",
+      "poi_name": "箱根神社",
+      "name_raw": "箱根神社",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P002",
+      "poi_name": "箱根蘆之湖海盜船",
+      "name_raw": "箱根蘆之湖海盜船（富士山美景）",
+      "visit_type": "入內參觀"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246129",
+    "day": 2,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "箱根神社",
+      "箱根蘆之湖海盜船（富士山美景）"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246129"
+  },
+  {
+    "edge_id": "E0002",
+    "from": {
+      "poi_id": "P002",
+      "poi_name": "箱根蘆之湖海盜船",
+      "name_raw": "箱根蘆之湖海盜船（富士山美景）",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P003",
+      "poi_name": "新倉山淺間公園",
+      "name_raw": "新倉山淺間公園",
+      "visit_type": "下車拍照"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [
+      "富士山景觀餐廳享用午餐"
+    ],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246129",
+    "day": 2,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "箱根蘆之湖海盜船（富士山美景）",
+      "新倉山淺間公園"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246129"
+  },
+  {
+    "edge_id": "E0003",
+    "from": {
+      "poi_id": "P004",
+      "poi_name": "忍野八海",
+      "name_raw": "忍野八海",
+      "visit_type": "下車拍照"
+    },
+    "to": {
+      "poi_id": "P005",
+      "poi_name": "御殿場 PREMIUM OUTLETS",
+      "name_raw": "御殿場 PREMIUM OUTLETS",
+      "visit_type": "入內參觀"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246129",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "忍野八海",
+      "御殿場 PREMIUM OUTLETS"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246129"
+  },
+  {
+    "edge_id": "E0004",
+    "from": {
+      "poi_id": "P005",
+      "poi_name": "御殿場 PREMIUM OUTLETS",
+      "name_raw": "御殿場 PREMIUM OUTLETS",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P006",
+      "poi_name": "修善寺",
+      "name_raw": "修善寺（獨鈷之湯、竹林小徑）",
+      "visit_type": "下車拍照"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246129",
+    "day": 3,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "御殿場 PREMIUM OUTLETS",
+      "修善寺（獨鈷之湯、竹林小徑）"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246129"
+  },
+  {
+    "edge_id": "E0005",
+    "from": {
+      "poi_id": "P007",
+      "poi_name": "大室山登山纜車",
+      "name_raw": "大室山登山纜車",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P008",
+      "poi_name": "城崎海岸",
+      "name_raw": "城崎海岸、門脇吊橋",
+      "visit_type": "下車拍照"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246129",
+    "day": 4,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "大室山登山纜車",
+      "城崎海岸、門脇吊橋"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246129"
+  },
+  {
+    "edge_id": "E0006",
+    "from": {
+      "poi_id": "P005",
+      "poi_name": "御殿場 PREMIUM OUTLETS",
+      "name_raw": "御殿場 PREMIUM OUTLETS",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P009",
+      "poi_name": "白鳥號遊覽船",
+      "name_raw": "白鳥號遊覽船",
+      "visit_type": "入內參觀"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10,
+      12
+    ],
+    "trip_id": "colatour_246485",
+    "day": 2,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "御殿場 PREMIUM OUTLETS",
+      "白鳥號遊覽船"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246485"
+  },
+  {
+    "edge_id": "E0007",
+    "from": {
+      "poi_id": "P009",
+      "poi_name": "白鳥號遊覽船",
+      "name_raw": "白鳥號遊覽船",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P004",
+      "poi_name": "忍野八海",
+      "name_raw": "新富岳百景忍野八海",
+      "visit_type": "下車拍照"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10,
+      12
+    ],
+    "trip_id": "colatour_246485",
+    "day": 2,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "白鳥號遊覽船",
+      "新富岳百景忍野八海"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246485"
+  },
+  {
+    "edge_id": "E0008",
+    "from": {
+      "poi_id": "P010",
+      "poi_name": "大石公園",
+      "name_raw": "大石公園",
+      "visit_type": "下車拍照"
+    },
+    "to": {
+      "poi_id": "P011",
+      "poi_name": "台場DiverCity Tokyo Plaza",
+      "name_raw": "台場自由逛街",
+      "visit_type": "下車拍照"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [
+      "光伸免稅店"
+    ],
+    "months": [
+      10,
+      12
+    ],
+    "trip_id": "colatour_246485",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "大石公園",
+      "台場自由逛街"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246485"
+  },
+  {
+    "edge_id": "E0009",
+    "from": {
+      "poi_id": "P005",
+      "poi_name": "御殿場 PREMIUM OUTLETS",
+      "name_raw": "御殿場 PREMIUM OUTLETS",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P004",
+      "poi_name": "忍野八海",
+      "name_raw": "新富岳百景忍野八海",
+      "visit_type": "入內參觀"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246661",
+    "day": 2,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "御殿場 PREMIUM OUTLETS",
+      "新富岳百景忍野八海"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246661"
+  },
+  {
+    "edge_id": "E0010",
+    "from": {
+      "poi_id": "P004",
+      "poi_name": "忍野八海",
+      "name_raw": "新富岳百景忍野八海",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P010",
+      "poi_name": "大石公園",
+      "name_raw": "大石公園",
+      "visit_type": "入內參觀"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246661",
+    "day": 2,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "新富岳百景忍野八海",
+      "大石公園"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246661"
+  },
+  {
+    "edge_id": "E0011",
+    "from": {
+      "poi_id": "P013",
+      "poi_name": "河口湖遊覽船天晴號",
+      "name_raw": "河口湖遊覽船~天晴號",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P014",
+      "poi_name": "富士北口淺間神社",
+      "name_raw": "富士北口淺間神社",
+      "visit_type": "入內參觀"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246661",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "河口湖遊覽船~天晴號",
+      "富士北口淺間神社"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246661"
+  },
+  {
+    "edge_id": "E0012",
+    "from": {
+      "poi_id": "P014",
+      "poi_name": "富士北口淺間神社",
+      "name_raw": "富士北口淺間神社",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P015",
+      "poi_name": "上野阿美橫町",
+      "name_raw": "上野阿美橫町散策",
+      "visit_type": "入內參觀"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [
+      "光伸免稅店"
+    ],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246661",
+    "day": 3,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "富士北口淺間神社",
+      "上野阿美橫町散策",
+      "配合日本巴士用車時間規定，此景點可能視當日狀況改以電車前往，敬請理解。"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246661"
+  },
+  {
+    "edge_id": "E0013",
+    "from": {
+      "poi_id": "P016",
+      "poi_name": "明治神宮",
+      "name_raw": "明治神宮、日本最大木製鳥居",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P017",
+      "poi_name": "新宿御苑",
+      "name_raw": "新宿御苑",
+      "visit_type": "入內參觀"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246661",
+    "day": 4,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "明治神宮、日本最大木製鳥居",
+      "新宿御苑"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246661"
+  },
+  {
+    "edge_id": "E0014",
+    "from": {
+      "poi_id": "P017",
+      "poi_name": "新宿御苑",
+      "name_raw": "新宿御苑",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P018",
+      "poi_name": "淺草觀音寺",
+      "name_raw": "淺草觀音寺(風雷神門)、仲見世街",
+      "visit_type": "入內參觀"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246661",
+    "day": 4,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "新宿御苑",
+      "淺草觀音寺(風雷神門)、仲見世街"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246661"
+  },
+  {
+    "edge_id": "E0015",
+    "from": {
+      "poi_id": "P018",
+      "poi_name": "淺草觀音寺",
+      "name_raw": "淺草觀音寺(風雷神門)、仲見世街",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P019",
+      "poi_name": "仲見世街",
+      "name_raw": "淺草觀音寺(風雷神門)、仲見世街",
+      "visit_type": "入內參觀"
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同一個行程項目拆出的相鄰景點",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246661",
+    "day": 4,
+    "seq": 3,
+    "source_type": "旅行社",
+    "evidence": [
+      "淺草觀音寺(風雷神門)、仲見世街"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246661"
+  },
+  {
+    "edge_id": "E0016",
+    "from": {
+      "poi_id": "P019",
+      "poi_name": "仲見世街",
+      "name_raw": "淺草觀音寺(風雷神門)、仲見世街",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P020",
+      "poi_name": "東京晴空塔",
+      "name_raw": "東京晴空塔(車內遠眺)",
+      "visit_type": "入內參觀"
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246661",
+    "day": 4,
+    "seq": 4,
+    "source_type": "旅行社",
+    "evidence": [
+      "淺草觀音寺(風雷神門)、仲見世街",
+      "東京晴空塔(車內遠眺)"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246661"
+  },
+  {
+    "edge_id": "E0017",
+    "from": {
+      "poi_id": "P020",
+      "poi_name": "東京晴空塔",
+      "name_raw": "東京晴空塔(車內遠眺)",
+      "visit_type": "入內參觀"
+    },
+    "to": {
+      "poi_id": "P021",
+      "poi_name": "天空町商店街",
+      "name_raw": "天空町商店街",
+      "visit_type": "入內參觀"
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "colatour_246661",
+    "day": 4,
+    "seq": 5,
+    "source_type": "旅行社",
+    "evidence": [
+      "東京晴空塔(車內遠眺)",
+      "天空町商店街",
+      "天空町商店街位在晴空塔內，晴空塔停車場採預約制，若無預約到，則改用電車往返替代，敬請理解。"
+    ],
+    "url": "https://tour.colatour.com.tw/itinerary?PatternNo=246661"
+  },
+  {
+    "edge_id": "E0018",
+    "from": {
+      "poi_id": "P023",
+      "poi_name": "江之島",
+      "name_raw": "江之島站",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P024",
+      "poi_name": "七里濱",
+      "name_raw": "七里濱站",
+      "visit_type": null
+    },
+    "mode": "大眾運輸",
+    "mode_inferred": true,
+    "mode_basis": "遊記起訖點記成車站",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 2,
+    "seq": 1,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0019",
+    "from": {
+      "poi_id": "P024",
+      "poi_name": "七里濱",
+      "name_raw": "七里濱站",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P025",
+      "poi_name": "鎌倉高校前站",
+      "name_raw": "鎌倉高校前站",
+      "visit_type": null
+    },
+    "mode": "大眾運輸",
+    "mode_inferred": true,
+    "mode_basis": "遊記起訖點記成車站",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 2,
+    "seq": 2,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0020",
+    "from": {
+      "poi_id": "P025",
+      "poi_name": "鎌倉高校前站",
+      "name_raw": "鎌倉高校前站",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P026",
+      "poi_name": "築地市場",
+      "name_raw": "Tsukiji Fish Market",
+      "visit_type": null
+    },
+    "mode": "大眾運輸",
+    "mode_inferred": true,
+    "mode_basis": "遊記起訖點記成車站",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 2,
+    "seq": 3,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0021",
+    "from": {
+      "poi_id": "P026",
+      "poi_name": "築地市場",
+      "name_raw": "Tsukiji Fish Market",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P027",
+      "poi_name": "銀座",
+      "name_raw": "銀座",
+      "visit_type": null
+    },
+    "mode": null,
+    "mode_inferred": false,
+    "mode_basis": "原文未寫",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 2,
+    "seq": 4,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0022",
+    "from": {
+      "poi_id": "P027",
+      "poi_name": "銀座",
+      "name_raw": "銀座",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P028",
+      "poi_name": "銀座出世地藏尊",
+      "name_raw": "Ginza Shusse Jizōson",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 2,
+    "seq": 5,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0023",
+    "from": {
+      "poi_id": "P029",
+      "poi_name": "三鷹之森吉卜力美術館",
+      "name_raw": "三鷹之森吉卜力美術館",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P030",
+      "poi_name": "井之頭恩賜公園",
+      "name_raw": "井之頭恩賜公園",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 3,
+    "seq": 1,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0024",
+    "from": {
+      "poi_id": "P030",
+      "poi_name": "井之頭恩賜公園",
+      "name_raw": "井之頭恩賜公園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P031",
+      "poi_name": "吉祥寺SUN ROAD商店街",
+      "name_raw": "吉祥寺SUN ROAD商店街",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 3,
+    "seq": 2,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0025",
+    "from": {
+      "poi_id": "P031",
+      "poi_name": "吉祥寺SUN ROAD商店街",
+      "name_raw": "吉祥寺SUN ROAD商店街",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P016",
+      "poi_name": "明治神宮",
+      "name_raw": "明治神宮",
+      "visit_type": null
+    },
+    "mode": "大眾運輸",
+    "mode_inferred": true,
+    "mode_basis": "途經車站",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [
+      "明治神宮前"
+    ],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 3,
+    "seq": 3,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0026",
+    "from": {
+      "poi_id": "P016",
+      "poi_name": "明治神宮",
+      "name_raw": "明治神宮",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P032",
+      "poi_name": "原宿",
+      "name_raw": "Harajuku",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 3,
+    "seq": 4,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0027",
+    "from": {
+      "poi_id": "P033",
+      "poi_name": "龜有公園",
+      "name_raw": "龜有公園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P034",
+      "poi_name": "龜有香取神社",
+      "name_raw": "龜有香取神社",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 4,
+    "seq": 1,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0028",
+    "from": {
+      "poi_id": "P034",
+      "poi_name": "龜有香取神社",
+      "name_raw": "龜有香取神社",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P026",
+      "poi_name": "築地市場",
+      "name_raw": "Tsukiji Fish Market",
+      "visit_type": null
+    },
+    "mode": "大眾運輸",
+    "mode_inferred": true,
+    "mode_basis": "途經車站",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [
+      "龜有車站",
+      "築地站"
+    ],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 4,
+    "seq": 2,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0029",
+    "from": {
+      "poi_id": "P026",
+      "poi_name": "築地市場",
+      "name_raw": "Tsukiji Fish Market",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P027",
+      "poi_name": "銀座",
+      "name_raw": "Ginza Loft",
+      "visit_type": null
+    },
+    "mode": null,
+    "mode_inferred": false,
+    "mode_basis": "原文未寫",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 4,
+    "seq": 3,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0030",
+    "from": {
+      "poi_id": "P027",
+      "poi_name": "銀座",
+      "name_raw": "Ginza Loft",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P035",
+      "poi_name": "秋葉原",
+      "name_raw": "秋葉原站",
+      "visit_type": null
+    },
+    "mode": "大眾運輸",
+    "mode_inferred": true,
+    "mode_basis": "遊記起訖點記成車站",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 4,
+    "seq": 4,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0031",
+    "from": {
+      "poi_id": "P035",
+      "poi_name": "秋葉原",
+      "name_raw": "秋葉原站",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P018",
+      "poi_name": "淺草觀音寺",
+      "name_raw": "淺草 雷門",
+      "visit_type": null
+    },
+    "mode": "大眾運輸",
+    "mode_inferred": true,
+    "mode_basis": "遊記起訖點記成車站",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 4,
+    "seq": 5,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0032",
+    "from": {
+      "poi_id": "P036",
+      "poi_name": "澀谷SKY",
+      "name_raw": "澀谷 SKY",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P037",
+      "poi_name": "澀谷109",
+      "name_raw": "澀谷109",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 5,
+    "seq": 1,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0033",
+    "from": {
+      "poi_id": "P037",
+      "poi_name": "澀谷109",
+      "name_raw": "澀谷109",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P038",
+      "poi_name": "澀谷PARCO",
+      "name_raw": "澀谷PARCO",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_123945",
+    "day": 5,
+    "seq": 2,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/123945"
+  },
+  {
+    "edge_id": "E0034",
+    "from": {
+      "poi_id": "P039",
+      "poi_name": "日本橋三越本店",
+      "name_raw": "日本橋三越本店",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P040",
+      "poi_name": "誠品生活日本橋",
+      "name_raw": "誠品生活日本橋",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_48388",
+    "day": 1,
+    "seq": 1,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/yokubaritabiko/journals/48388"
+  },
+  {
+    "edge_id": "E0035",
+    "from": {
+      "poi_id": "P015",
+      "poi_name": "上野阿美橫町",
+      "name_raw": "上野阿美橫町",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P019",
+      "poi_name": "仲見世街",
+      "name_raw": "Nakamise Street",
+      "visit_type": null
+    },
+    "mode": "大眾運輸",
+    "mode_inferred": false,
+    "mode_basis": "原文明寫",
+    "vehicle": "銀座線",
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_57214",
+    "day": 1,
+    "seq": 1,
+    "source_type": "遊記",
+    "evidence": [
+      "從上野廣小路站搭乘銀座線4站到淺草站下車，走出地鐵站後沒幾步便會看到雷門"
+    ],
+    "url": "https://www.funliday.com/prevengers/journals/57214"
+  },
+  {
+    "edge_id": "E0036",
+    "from": {
+      "poi_id": "P019",
+      "poi_name": "仲見世街",
+      "name_raw": "Nakamise Street",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P018",
+      "poi_name": "淺草觀音寺",
+      "name_raw": "淺草寺",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_57214",
+    "day": 1,
+    "seq": 2,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/57214"
+  },
+  {
+    "edge_id": "E0037",
+    "from": {
+      "poi_id": "P018",
+      "poi_name": "淺草觀音寺",
+      "name_raw": "淺草寺",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P041",
+      "poi_name": "淺草文化觀光中心",
+      "name_raw": "淺草文化觀光中心",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_57214",
+    "day": 1,
+    "seq": 3,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/57214"
+  },
+  {
+    "edge_id": "E0038",
+    "from": {
+      "poi_id": "P041",
+      "poi_name": "淺草文化觀光中心",
+      "name_raw": "淺草文化觀光中心",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P042",
+      "poi_name": "東京水岸街道",
+      "name_raw": "東京水岸街道 (Tokyo Mizumachi)",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": false,
+    "mode_basis": "原文明寫",
+    "vehicle": "隅田川步道（Sumida River Walk）",
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_57214",
+    "day": 1,
+    "seq": 4,
+    "source_type": "遊記",
+    "evidence": [
+      "以前逛完淺草想再接著去晴空塔的話，必須要搭乘電車才能前往。",
+      "多了一條超方便的隅田川步道「Sumida River Walk（すみだリバーウォーク）」，步道長約160公尺",
+      "走著走著便可抵達河川的另一岸。"
+    ],
+    "url": "https://www.funliday.com/prevengers/journals/57214"
+  },
+  {
+    "edge_id": "E0039",
+    "from": {
+      "poi_id": "P042",
+      "poi_name": "東京水岸街道",
+      "name_raw": "東京水岸街道 (Tokyo Mizumachi)",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P021",
+      "poi_name": "天空町商店街",
+      "name_raw": "東京晴空街道",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_57214",
+    "day": 1,
+    "seq": 5,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/57214"
+  },
+  {
+    "edge_id": "E0040",
+    "from": {
+      "poi_id": "P021",
+      "poi_name": "天空町商店街",
+      "name_raw": "東京晴空街道",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P020",
+      "poi_name": "東京晴空塔",
+      "name_raw": "東京晴空塔",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_57214",
+    "day": 1,
+    "seq": 6,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/prevengers/journals/57214"
+  },
+  {
+    "edge_id": "E0041",
+    "from": {
+      "poi_id": "P029",
+      "poi_name": "三鷹之森吉卜力美術館",
+      "name_raw": "三鷹之森吉卜力美術館",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P043",
+      "poi_name": "吉祥寺",
+      "name_raw": "吉祥寺站",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": false,
+    "mode_basis": "原文明寫",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_57214",
+    "day": 2,
+    "seq": 1,
+    "source_type": "遊記",
+    "evidence": [
+      "參觀完三鷹吉卜力美術館後，散步到腹地廣大的井之頭恩賜公園"
+    ],
+    "url": "https://www.funliday.com/prevengers/journals/57214"
+  },
+  {
+    "edge_id": "E0042",
+    "from": {
+      "poi_id": "P043",
+      "poi_name": "吉祥寺",
+      "name_raw": "吉祥寺站",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P044",
+      "poi_name": "西荻窪",
+      "name_raw": "西荻窪站",
+      "visit_type": null
+    },
+    "mode": "大眾運輸",
+    "mode_inferred": false,
+    "mode_basis": "原文明寫",
+    "vehicle": "JR中央本線",
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [],
+    "trip_id": "funliday_57214",
+    "day": 2,
+    "seq": 2,
+    "source_type": "遊記",
+    "evidence": [
+      "從吉祥寺離開後，搭乘JR中央本線，僅一站便到達了西荻窪站。"
+    ],
+    "url": "https://www.funliday.com/prevengers/journals/57214"
+  },
+  {
+    "edge_id": "E0043",
+    "from": {
+      "poi_id": "P018",
+      "poi_name": "淺草觀音寺",
+      "name_raw": "浅草寺",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P026",
+      "poi_name": "築地市場",
+      "name_raw": "築地市場",
+      "visit_type": null
+    },
+    "mode": "大眾運輸",
+    "mode_inferred": false,
+    "mode_basis": "原文明寫",
+    "vehicle": "地鐵",
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1
+    ],
+    "trip_id": "funliday_72307",
+    "day": 1,
+    "seq": 1,
+    "source_type": "遊記",
+    "evidence": [
+      "接下來我們搭乘地鐵到築地市場",
+      "地鐵站出來後 大約走五～八分鐘 就可以到達築地市場"
+    ],
+    "url": "https://www.funliday.com/fukuoka_yumeko/journals/72307"
+  },
+  {
+    "edge_id": "E0044",
+    "from": {
+      "poi_id": "P026",
+      "poi_name": "築地市場",
+      "name_raw": "築地市場",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P046",
+      "poi_name": "築地本願寺",
+      "name_raw": "築地市場本院寺",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": false,
+    "mode_basis": "原文明寫",
+    "vehicle": null,
+    "duration_min": 5,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1
+    ],
+    "trip_id": "funliday_72307",
+    "day": 1,
+    "seq": 2,
+    "source_type": "遊記",
+    "evidence": [
+      "本院寺位子就在築地市場的旁邊，走路約五分鐘可以到達。"
+    ],
+    "url": "https://www.funliday.com/fukuoka_yumeko/journals/72307"
+  },
+  {
+    "edge_id": "E0045",
+    "from": {
+      "poi_id": "P046",
+      "poi_name": "築地本願寺",
+      "name_raw": "築地市場本院寺",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P047",
+      "poi_name": "東京鐵塔",
+      "name_raw": "東京タワー",
+      "visit_type": null
+    },
+    "mode": "大眾運輸",
+    "mode_inferred": false,
+    "mode_basis": "原文明寫",
+    "vehicle": "電車",
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1
+    ],
+    "trip_id": "funliday_72307",
+    "day": 1,
+    "seq": 3,
+    "source_type": "遊記",
+    "evidence": [
+      "再來我們搭乘電車到東京鐵塔"
+    ],
+    "url": "https://www.funliday.com/fukuoka_yumeko/journals/72307"
+  },
+  {
+    "edge_id": "E0046",
+    "from": {
+      "poi_id": "P047",
+      "poi_name": "東京鐵塔",
+      "name_raw": "Tokyo Tower Station Parking lot",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P048",
+      "poi_name": "增上寺",
+      "name_raw": "増上寺",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": false,
+    "mode_basis": "原文明寫",
+    "vehicle": null,
+    "duration_min": 5,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1
+    ],
+    "trip_id": "funliday_72307",
+    "day": 1,
+    "seq": 4,
+    "source_type": "遊記",
+    "evidence": [
+      "東京鐵塔逛完 可以慢慢走到旁邊的增上寺",
+      "大約走五分鐘 就可以拍到增上寺和東京鐵塔"
+    ],
+    "url": "https://www.funliday.com/fukuoka_yumeko/journals/72307"
+  },
+  {
+    "edge_id": "E0047",
+    "from": {
+      "poi_id": "P048",
+      "poi_name": "增上寺",
+      "name_raw": "増上寺",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P049",
+      "poi_name": "中目黑星巴克旗艦店",
+      "name_raw": "中目黑星巴克旗艦店",
+      "visit_type": null
+    },
+    "mode": null,
+    "mode_inferred": false,
+    "mode_basis": "原文未寫",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1
+    ],
+    "trip_id": "funliday_72307",
+    "day": 1,
+    "seq": 5,
+    "source_type": "遊記",
+    "evidence": [],
+    "url": "https://www.funliday.com/fukuoka_yumeko/journals/72307"
+  },
+  {
+    "edge_id": "E0048",
+    "from": {
+      "poi_id": "P050",
+      "poi_name": "小田原城",
+      "name_raw": "小田原城(不含天守閣)",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P001",
+      "poi_name": "箱根神社",
+      "name_raw": "箱根神社",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_1115a5ac-863d-449d-ae01-44252307e034",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本百大名城～難攻不破之城～【小田原城(不含天守閣)】",
+      "富士箱根伊豆國立公園～蘆之湖畔【箱根神社】～水上大鳥居"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=1115a5ac-863d-449d-ae01-44252307e034"
+  },
+  {
+    "edge_id": "E0049",
+    "from": {
+      "poi_id": "P001",
+      "poi_name": "箱根神社",
+      "name_raw": "箱根神社",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P005",
+      "poi_name": "御殿場 PREMIUM OUTLETS",
+      "name_raw": "御殿場OUTELT",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_1115a5ac-863d-449d-ae01-44252307e034",
+    "day": 3,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "富士箱根伊豆國立公園～蘆之湖畔【箱根神社】～水上大鳥居",
+      "關東最大級OUTLET～【御殿場OUTELT】～眺望絕美富士山美景"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=1115a5ac-863d-449d-ae01-44252307e034"
+  },
+  {
+    "edge_id": "E0050",
+    "from": {
+      "poi_id": "P004",
+      "poi_name": "忍野八海",
+      "name_raw": "忍野八海",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P010",
+      "poi_name": "大石公園",
+      "name_raw": "大石公園",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_1115a5ac-863d-449d-ae01-44252307e034",
+    "day": 4,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本百選名水～【忍野八海】～國家天然紀念物～眺望日本聖山富士山",
+      "河口湖畔拍攝日本聖山富士山絕佳人氣景點～【大石公園】"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=1115a5ac-863d-449d-ae01-44252307e034"
+  },
+  {
+    "edge_id": "E0051",
+    "from": {
+      "poi_id": "P010",
+      "poi_name": "大石公園",
+      "name_raw": "大石公園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P011",
+      "poi_name": "台場DiverCity Tokyo Plaza",
+      "name_raw": "台場DiverCityokyo Plaza～東京臨海副都心",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [
+      "免稅店"
+    ],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_1115a5ac-863d-449d-ae01-44252307e034",
+    "day": 4,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "河口湖畔拍攝日本聖山富士山絕佳人氣景點～【大石公園】",
+      "台場DiverCityokyo Plaza～東京臨海副都心"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=1115a5ac-863d-449d-ae01-44252307e034"
+  },
+  {
+    "edge_id": "E0052",
+    "from": {
+      "poi_id": "P016",
+      "poi_name": "明治神宮",
+      "name_raw": "明治神宮",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P051",
+      "poi_name": "麻布台之丘",
+      "name_raw": "麻布台之丘Azabudai Hills",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_1115a5ac-863d-449d-ae01-44252307e034",
+    "day": 5,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "東京都中心的森林～【明治神宮】～品味現代流行文化與日本歷史的碰撞",
+      "2023年11月底才開幕的東京最新商場～【麻布台之丘Azabudai Hills】"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=1115a5ac-863d-449d-ae01-44252307e034"
+  },
+  {
+    "edge_id": "E0053",
+    "from": {
+      "poi_id": "P051",
+      "poi_name": "麻布台之丘",
+      "name_raw": "麻布台之丘Azabudai Hills",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P052",
+      "poi_name": "豐洲千客萬來",
+      "name_raw": "豐洲千客萬來",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_1115a5ac-863d-449d-ae01-44252307e034",
+    "day": 5,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "2023年11月底才開幕的東京最新商場～【麻布台之丘Azabudai Hills】",
+      "東京新名勝～【豐洲千客萬來】～千客萬來時鐘廣場、豐洲大街、仙久麻井足浴花園"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=1115a5ac-863d-449d-ae01-44252307e034"
+  },
+  {
+    "edge_id": "E0054",
+    "from": {
+      "poi_id": "P018",
+      "poi_name": "淺草觀音寺",
+      "name_raw": "淺草觀音寺",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P052",
+      "poi_name": "豐洲千客萬來",
+      "name_raw": "豐洲千客萬來",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_4d01cab3-cb93-42d4-9b9a-2302d4db0776",
+    "day": 2,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "東京經典必遊勝地之一【淺草觀音寺】～紅色大燈籠「雷門」& 江戶繁華老街「仲見世通」",
+      "東京新名勝～【豐洲千客萬來】～千客萬來時鍾廣場、豐洲大街、仙久麻井足浴花園"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=4d01cab3-cb93-42d4-9b9a-2302d4db0776"
+  },
+  {
+    "edge_id": "E0055",
+    "from": {
+      "poi_id": "P052",
+      "poi_name": "豐洲千客萬來",
+      "name_raw": "豐洲千客萬來",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P053",
+      "poi_name": "新橫濱拉麵博物館",
+      "name_raw": "新橫濱拉麵博物館",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_4d01cab3-cb93-42d4-9b9a-2302d4db0776",
+    "day": 2,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "東京新名勝～【豐洲千客萬來】～千客萬來時鍾廣場、豐洲大街、仙久麻井足浴花園",
+      "匯聚全國名店的【新橫濱拉麵博物館】完美復刻日本復古昭和風情的面貌，讓您一站品味日本各地拉麵的精髓！"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=4d01cab3-cb93-42d4-9b9a-2302d4db0776"
+  },
+  {
+    "edge_id": "E0056",
+    "from": {
+      "poi_id": "P054",
+      "poi_name": "鶴岡八幡宮",
+      "name_raw": "鶴岡八幡宮",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P055",
+      "poi_name": "鶴岡八幡小町通",
+      "name_raw": "鶴岡八幡小町通",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_4d01cab3-cb93-42d4-9b9a-2302d4db0776",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本三大八幡宮之～【鶴岡八幡宮】",
+      "鎌倉古街散策 ～【鶴岡八幡小町通】"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=4d01cab3-cb93-42d4-9b9a-2302d4db0776"
+  },
+  {
+    "edge_id": "E0057",
+    "from": {
+      "poi_id": "P055",
+      "poi_name": "鶴岡八幡小町通",
+      "name_raw": "鶴岡八幡小町通",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P056",
+      "poi_name": "MITSUI OUTLET PARK 橫濱港灣",
+      "name_raw": "MITSUI OUTLET PARK 橫濱港灣",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_4d01cab3-cb93-42d4-9b9a-2302d4db0776",
+    "day": 3,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "鎌倉古街散策 ～【鶴岡八幡小町通】",
+      "橫濱新購物商場～日本三井集團【MITSUI OUTLET PARK 橫濱港灣】～"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=4d01cab3-cb93-42d4-9b9a-2302d4db0776"
+  },
+  {
+    "edge_id": "E0058",
+    "from": {
+      "poi_id": "P047",
+      "poi_name": "東京鐵塔",
+      "name_raw": "東京鐵塔(不上塔)",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P011",
+      "poi_name": "台場DiverCity Tokyo Plaza",
+      "name_raw": "台場 DiverCityokyo Plaza",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_4d01cab3-cb93-42d4-9b9a-2302d4db0776",
+    "day": 4,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "東京經典標的建築物～【東京鐵塔(不上塔) 】",
+      "【台場 DiverCityokyo Plaza】～東京臨海副都心～享受時尚東京購物之樂！"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=4d01cab3-cb93-42d4-9b9a-2302d4db0776"
+  },
+  {
+    "edge_id": "E0059",
+    "from": {
+      "poi_id": "P057",
+      "poi_name": "皇居二重橋",
+      "name_raw": "皇居二重橋",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P021",
+      "poi_name": "天空町商店街",
+      "name_raw": "晴空街道商店街",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_4d01cab3-cb93-42d4-9b9a-2302d4db0776",
+    "day": 5,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "江戶城舊址～【皇居二重橋】",
+      "SKYTREE TOWN．東京晴空塔(不含展望台)～【晴空街道商店街】"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=4d01cab3-cb93-42d4-9b9a-2302d4db0776"
+  },
+  {
+    "edge_id": "E0060",
+    "from": {
+      "poi_id": "P021",
+      "poi_name": "天空町商店街",
+      "name_raw": "晴空街道商店街",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P058",
+      "poi_name": "成田AEON永旺夢樂城",
+      "name_raw": "成田AEON～永旺夢樂城",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_4d01cab3-cb93-42d4-9b9a-2302d4db0776",
+    "day": 5,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "SKYTREE TOWN．東京晴空塔(不含展望台)～【晴空街道商店街】",
+      "成田大型購物中心【成田AEON～永旺夢樂城】"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=4d01cab3-cb93-42d4-9b9a-2302d4db0776"
+  },
+  {
+    "edge_id": "E0061",
+    "from": {
+      "poi_id": "P059",
+      "poi_name": "六義園",
+      "name_raw": "六義園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P060",
+      "poi_name": "川越藏造一番街",
+      "name_raw": "川越藏造一番街",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 50.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_7ff4f886-7309-43fc-b358-24a91c90f94f",
+    "day": 2,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本最美回游式築山泉水庭園～【六義園】～渡月橋、茶屋、藤代嶺",
+      "日本小江戶風貌代表～【川越藏造一番街】～時代之鐘～菓子屋橫丁"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=7ff4f886-7309-43fc-b358-24a91c90f94f"
+  },
+  {
+    "edge_id": "E0062",
+    "from": {
+      "poi_id": "P060",
+      "poi_name": "川越藏造一番街",
+      "name_raw": "川越藏造一番街",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P061",
+      "poi_name": "嚕嚕米Moomin森林公園",
+      "name_raw": "嚕嚕米Moomin森林公園",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 18.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_7ff4f886-7309-43fc-b358-24a91c90f94f",
+    "day": 2,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本小江戶風貌代表～【川越藏造一番街】～時代之鐘～菓子屋橫丁",
+      "芬蘭著名童話（姆明一族）～【嚕嚕米Moomin森林公園】"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=7ff4f886-7309-43fc-b358-24a91c90f94f"
+  },
+  {
+    "edge_id": "E0063",
+    "from": {
+      "poi_id": "P062",
+      "poi_name": "雲場池",
+      "name_raw": "雲場池",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P063",
+      "poi_name": "舊輕井澤銀座大道",
+      "name_raw": "舊輕井澤銀座大道",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 2.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_7ff4f886-7309-43fc-b358-24a91c90f94f",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "輕井澤天鵝湖林蔭小道～【雲場池】～四季有不同的美景",
+      "輕井澤悠活散策～【舊輕井澤銀座大道】～聖保羅教堂"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=7ff4f886-7309-43fc-b358-24a91c90f94f"
+  },
+  {
+    "edge_id": "E0064",
+    "from": {
+      "poi_id": "P063",
+      "poi_name": "舊輕井澤銀座大道",
+      "name_raw": "舊輕井澤銀座大道",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P064",
+      "poi_name": "小諸城址．懷古園",
+      "name_raw": "小諸城址．懷古園",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 24.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_7ff4f886-7309-43fc-b358-24a91c90f94f",
+    "day": 3,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "輕井澤悠活散策～【舊輕井澤銀座大道】～聖保羅教堂",
+      "私房景點．戰國穴城風貌～【小諸城址．懷古園】～春分櫻花情、夏滿繡球花、秋染楓葉紅、白雪醉月城"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=7ff4f886-7309-43fc-b358-24a91c90f94f"
+  },
+  {
+    "edge_id": "E0065",
+    "from": {
+      "poi_id": "P010",
+      "poi_name": "大石公園",
+      "name_raw": "大石公園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P004",
+      "poi_name": "忍野八海",
+      "name_raw": "忍野八海",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 15.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_7ff4f886-7309-43fc-b358-24a91c90f94f",
+    "day": 4,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "河口湖畔富士山絕景～【大石公園】～花街道＆花小富士",
+      "日本百選名水～【忍野八海】～國家天然紀念物"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=7ff4f886-7309-43fc-b358-24a91c90f94f"
+  },
+  {
+    "edge_id": "E0066",
+    "from": {
+      "poi_id": "P004",
+      "poi_name": "忍野八海",
+      "name_raw": "忍野八海",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P011",
+      "poi_name": "台場DiverCity Tokyo Plaza",
+      "name_raw": "台場DiverCity Tokyo Plaza",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 136.0,
+    "via": [
+      "免稅店"
+    ],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_7ff4f886-7309-43fc-b358-24a91c90f94f",
+    "day": 4,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本百選名水～【忍野八海】～國家天然紀念物",
+      "東京臨海副都心～【台場DiverCity Tokyo Plaza】"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=7ff4f886-7309-43fc-b358-24a91c90f94f"
+  },
+  {
+    "edge_id": "E0067",
+    "from": {
+      "poi_id": "P065",
+      "poi_name": "港見丘公園",
+      "name_raw": "港見丘公園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P053",
+      "poi_name": "新橫濱拉麵博物館",
+      "name_raw": "新橫濱拉麵博物館",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 15.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_86545bd1-ff78-4498-9669-8111d8b78c0e",
+    "day": 2,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "【港見丘公園】～橫濱山手西洋館～尋訪西洋歷史珍貴建築",
+      "匯聚全國名店的【新橫濱拉麵博物館】完美復刻日本復古昭和風情的面貌，讓您一站品味日本各地拉麵的精髓"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=86545bd1-ff78-4498-9669-8111d8b78c0e"
+  },
+  {
+    "edge_id": "E0068",
+    "from": {
+      "poi_id": "P053",
+      "poi_name": "新橫濱拉麵博物館",
+      "name_raw": "新橫濱拉麵博物館",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P066",
+      "poi_name": "江之島神社",
+      "name_raw": "江之島神社",
+      "visit_type": null
+    },
+    "mode": "大眾運輸",
+    "mode_inferred": false,
+    "mode_basis": "原文明寫",
+    "vehicle": "江之島電鐵",
+    "duration_min": null,
+    "distance_km": null,
+    "via": [
+      "江之島電鐵"
+    ],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_86545bd1-ff78-4498-9669-8111d8b78c0e",
+    "day": 2,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "匯聚全國名店的【新橫濱拉麵博物館】完美復刻日本復古昭和風情的面貌，讓您一站品味日本各地拉麵的精髓",
+      "★特別安排一段湘南海岸復古情調電車體驗【江之島電鐵】日本三大辯才天之一【江之島神社】★特別安排［單程手扶梯］輕鬆登頂～眺望江之島美景！"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=86545bd1-ff78-4498-9669-8111d8b78c0e"
+  },
+  {
+    "edge_id": "E0069",
+    "from": {
+      "poi_id": "P047",
+      "poi_name": "東京鐵塔",
+      "name_raw": "東京鐵塔(不上塔)",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P067",
+      "poi_name": "東京華納兄弟哈利波特影城",
+      "name_raw": "東京華納兄弟哈利波特影城",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 30.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_86545bd1-ff78-4498-9669-8111d8b78c0e",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "東京經典標的建築物～【東京鐵塔(不上塔) 】",
+      "★特別安排：2023年6月東京最新開幕奇幻世界～【東京華納兄弟哈利波特影城】~體驗電影幕後製作的神奇魔法世界！"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=86545bd1-ff78-4498-9669-8111d8b78c0e"
+  },
+  {
+    "edge_id": "E0070",
+    "from": {
+      "poi_id": "P067",
+      "poi_name": "東京華納兄弟哈利波特影城",
+      "name_raw": "東京華納兄弟哈利波特影城",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P068",
+      "poi_name": "池袋",
+      "name_raw": "池袋",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 10.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_86545bd1-ff78-4498-9669-8111d8b78c0e",
+    "day": 3,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "★特別安排：2023年6月東京最新開幕奇幻世界～【東京華納兄弟哈利波特影城】~體驗電影幕後製作的神奇魔法世界！",
+      "日本年輕人潮流發源地～【池袋】～自由逛街購物"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=86545bd1-ff78-4498-9669-8111d8b78c0e"
+  },
+  {
+    "edge_id": "E0071",
+    "from": {
+      "poi_id": "P045",
+      "poi_name": "上野恩賜公園",
+      "name_raw": "上野恩賜公園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P069",
+      "poi_name": "上野動物園",
+      "name_raw": "上野動物園",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_86545bd1-ff78-4498-9669-8111d8b78c0e",
+    "day": 5,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本最古老的五大公園之一～【上野恩賜公園】～不忍池、西鄉隆盛銅像",
+      "日本最知名的動物園之一～【上野動物園】飯店"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=86545bd1-ff78-4498-9669-8111d8b78c0e"
+  },
+  {
+    "edge_id": "E0072",
+    "from": {
+      "poi_id": "P059",
+      "poi_name": "六義園",
+      "name_raw": "六義園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P004",
+      "poi_name": "忍野八海",
+      "name_raw": "忍野八海",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 118.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_8c77783c-b6a4-468e-bc53-3798f19b23ad",
+    "day": 2,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本最美回游式築山泉水庭園～【六義園】～渡月橋、茶屋、藤代嶺",
+      "日本百選名水～【忍野八海】～國家天然紀念物"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=8c77783c-b6a4-468e-bc53-3798f19b23ad"
+  },
+  {
+    "edge_id": "E0073",
+    "from": {
+      "poi_id": "P004",
+      "poi_name": "忍野八海",
+      "name_raw": "忍野八海",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P005",
+      "poi_name": "御殿場 PREMIUM OUTLETS",
+      "name_raw": "御殿場PREMIUM OUTLET",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 25.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_8c77783c-b6a4-468e-bc53-3798f19b23ad",
+    "day": 2,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本百選名水～【忍野八海】～國家天然紀念物",
+      "關東最大級～【御殿場PREMIUM OUTLET】～網羅多家知名品牌、眺望富士山美景"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=8c77783c-b6a4-468e-bc53-3798f19b23ad"
+  },
+  {
+    "edge_id": "E0074",
+    "from": {
+      "poi_id": "P010",
+      "poi_name": "大石公園",
+      "name_raw": "大石公園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P062",
+      "poi_name": "雲場池",
+      "name_raw": "雲場池",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 145.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_8c77783c-b6a4-468e-bc53-3798f19b23ad",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "河口湖畔富士山絕景～【大石公園】～花街道＆花小富士",
+      "輕井澤天鵝湖林蔭小道～【雲場池】～四季有不同的美景"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=8c77783c-b6a4-468e-bc53-3798f19b23ad"
+  },
+  {
+    "edge_id": "E0075",
+    "from": {
+      "poi_id": "P062",
+      "poi_name": "雲場池",
+      "name_raw": "雲場池",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P063",
+      "poi_name": "舊輕井澤銀座大道",
+      "name_raw": "舊輕井澤銀座大道",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 2.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_8c77783c-b6a4-468e-bc53-3798f19b23ad",
+    "day": 3,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "輕井澤天鵝湖林蔭小道～【雲場池】～四季有不同的美景",
+      "輕井澤悠活散策～【舊輕井澤銀座大道】～聖保羅教堂"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=8c77783c-b6a4-468e-bc53-3798f19b23ad"
+  },
+  {
+    "edge_id": "E0076",
+    "from": {
+      "poi_id": "P070",
+      "poi_name": "富岡製絲廠",
+      "name_raw": "富岡製絲廠",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P060",
+      "poi_name": "川越藏造一番街",
+      "name_raw": "川越藏造一番街",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 86.0,
+    "via": [],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_8c77783c-b6a4-468e-bc53-3798f19b23ad",
+    "day": 4,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "世界文化遺產‧【富岡製絲廠】～百年建築群、體感世界最大規模製絲廠震撼",
+      "日本小江戶風貌代表～【川越藏造一番街】～時代之鐘～菓子屋橫丁約"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=8c77783c-b6a4-468e-bc53-3798f19b23ad"
+  },
+  {
+    "edge_id": "E0077",
+    "from": {
+      "poi_id": "P060",
+      "poi_name": "川越藏造一番街",
+      "name_raw": "川越藏造一番街",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P011",
+      "poi_name": "台場DiverCity Tokyo Plaza",
+      "name_raw": "台場DiverCity Tokyo Plaza",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": 71.0,
+    "via": [
+      "免稅店"
+    ],
+    "months": [
+      10
+    ],
+    "trip_id": "liontravel_8c77783c-b6a4-468e-bc53-3798f19b23ad",
+    "day": 4,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本小江戶風貌代表～【川越藏造一番街】～時代之鐘～菓子屋橫丁約",
+      "東京臨海副都心～【台場DiverCity Tokyo Plaza】"
+    ],
+    "url": "https://travel.liontravel.com/detail?NormGroupID=8c77783c-b6a4-468e-bc53-3798f19b23ad"
+  },
+  {
+    "edge_id": "E0078",
+    "from": {
+      "poi_id": "P071",
+      "poi_name": "母親牧場",
+      "name_raw": "母親牧場",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P072",
+      "poi_name": "鋸山纜車",
+      "name_raw": "鋸山纜車",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05AA2",
+    "day": 2,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "【母親牧場】秋季限定！漸紅波波掃帚草~綿羊秀、鴨子+牧羊犬綿羊遊行",
+      "關東富士見百景~賞楓秘境🍁【鋸山纜車】地獄觀景台、百尺觀音"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05AA2/"
+  },
+  {
+    "edge_id": "E0079",
+    "from": {
+      "poi_id": "P054",
+      "poi_name": "鶴岡八幡宮",
+      "name_raw": "鶴岡八幡宮",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P055",
+      "poi_name": "鶴岡八幡小町通",
+      "name_raw": "鶴岡八幡小町通",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05AA2",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "賞楓名所🍁日本三大八幡宮【鶴岡八幡宮】打卡酒甕牆",
+      "【鶴岡八幡小町通】鎌倉古街散策"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05AA2/"
+  },
+  {
+    "edge_id": "E0080",
+    "from": {
+      "poi_id": "P055",
+      "poi_name": "鶴岡八幡小町通",
+      "name_raw": "鶴岡八幡小町通",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P073",
+      "poi_name": "河口湖紅葉迴廊",
+      "name_raw": "河口湖 紅葉迴廊",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05AA2",
+    "day": 3,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "【鶴岡八幡小町通】鎌倉古街散策",
+      "夢幻楓葉富士山【河口湖 紅葉迴廊】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05AA2/"
+  },
+  {
+    "edge_id": "E0081",
+    "from": {
+      "poi_id": "P074",
+      "poi_name": "修善寺虹之鄉",
+      "name_raw": "修善寺虹之鄉",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P075",
+      "poi_name": "堂島洞窟遊覽船",
+      "name_raw": "堂島洞窟遊覽船",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05AA2",
+    "day": 4,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "賞楓名所🍁【修善寺虹之鄉】漫步楓紅日式庭園",
+      "特別安排搭乘★【堂島洞窟遊覽船】探索神秘的「藍洞」夢幻世界"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05AA2/"
+  },
+  {
+    "edge_id": "E0082",
+    "from": {
+      "poi_id": "P076",
+      "poi_name": "熱海梅園",
+      "name_raw": "熱海梅園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P077",
+      "poi_name": "熱海銀座商店街",
+      "name_raw": "懷舊感十足的熱海銀座商店街ATAMI GINZA SHOTENGAI",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05AA2",
+    "day": 5,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本最晚的絕艷紅葉秘境🍁【熱海梅園】四季如畫楓葉步道",
+      "懷舊感十足的熱海銀座商店街ATAMI GINZA SHOTENGAI"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05AA2/"
+  },
+  {
+    "edge_id": "E0083",
+    "from": {
+      "poi_id": "P079",
+      "poi_name": "那須高原纜車",
+      "name_raw": "那須高原纜車",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P080",
+      "poi_name": "五色沼",
+      "name_raw": "五色沼",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05KHH006",
+    "day": 2,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "【那須高原纜車】",
+      "夢幻【五色沼】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05KHH006/"
+  },
+  {
+    "edge_id": "E0084",
+    "from": {
+      "poi_id": "P080",
+      "poi_name": "五色沼",
+      "name_raw": "五色沼",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P081",
+      "poi_name": "會津若松城",
+      "name_raw": "會津若松城",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05KHH006",
+    "day": 2,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "夢幻【五色沼】",
+      "鶴の城【會津若松城】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05KHH006/"
+  },
+  {
+    "edge_id": "E0085",
+    "from": {
+      "poi_id": "P082",
+      "poi_name": "大內宿",
+      "name_raw": "大內宿",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P083",
+      "poi_name": "日光東照宮",
+      "name_raw": "日光東照宮(世界遺產)",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05KHH006",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本三大茅葺屋集落【大內宿】",
+      "江戶文化精髓【日光東照宮(世界遺產)】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05KHH006/"
+  },
+  {
+    "edge_id": "E0086",
+    "from": {
+      "poi_id": "P083",
+      "poi_name": "日光東照宮",
+      "name_raw": "日光東照宮(世界遺產)",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P084",
+      "poi_name": "華嚴瀑布",
+      "name_raw": "華嚴瀑布",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05KHH006",
+    "day": 3,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "江戶文化精髓【日光東照宮(世界遺產)】",
+      "日本三大名瀑【華嚴瀑布】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05KHH006/"
+  },
+  {
+    "edge_id": "E0087",
+    "from": {
+      "poi_id": "P085",
+      "poi_name": "龍王峽",
+      "name_raw": "龍王峽",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P060",
+      "poi_name": "川越藏造一番街",
+      "name_raw": "川越老街",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05KHH006",
+    "day": 4,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "賞楓名所【龍王峽】",
+      "江戶風情【川越老街】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05KHH006/"
+  },
+  {
+    "edge_id": "E0088",
+    "from": {
+      "poi_id": "P060",
+      "poi_name": "川越藏造一番街",
+      "name_raw": "川越老街",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P011",
+      "poi_name": "台場DiverCity Tokyo Plaza",
+      "name_raw": "台場DiverCity Tokyo Plaza購物廣場",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [
+      "免稅店"
+    ],
+    "months": [
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05KHH006",
+    "day": 4,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "江戶風情【川越老街】",
+      "【台場DiverCity Tokyo Plaza購物廣場】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05KHH006/"
+  },
+  {
+    "edge_id": "E0089",
+    "from": {
+      "poi_id": "P087",
+      "poi_name": "千鳥之淵",
+      "name_raw": "千鳥之淵",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P045",
+      "poi_name": "上野恩賜公園",
+      "name_raw": "上野恩賜公園",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      3,
+      4
+    ],
+    "trip_id": "travel4u_TYO05KHH012",
+    "day": 2,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "護城河畔的粉色夢境【千鳥之淵】",
+      "百年靜謐的賞櫻聖地【上野恩賜公園】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05KHH012/"
+  },
+  {
+    "edge_id": "E0090",
+    "from": {
+      "poi_id": "P045",
+      "poi_name": "上野恩賜公園",
+      "name_raw": "上野恩賜公園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P018",
+      "poi_name": "淺草觀音寺",
+      "name_raw": "淺草觀音寺",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      3,
+      4
+    ],
+    "trip_id": "travel4u_TYO05KHH012",
+    "day": 2,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "百年靜謐的賞櫻聖地【上野恩賜公園】",
+      "穿越千年時光的信仰廳堂【淺草觀音寺】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05KHH012/"
+  },
+  {
+    "edge_id": "E0091",
+    "from": {
+      "poi_id": "P017",
+      "poi_name": "新宿御苑",
+      "name_raw": "新宿御苑",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P036",
+      "poi_name": "澀谷SKY",
+      "name_raw": "澀谷展望台SHIBUYA SKY",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [
+      "免稅店"
+    ],
+    "months": [
+      3,
+      4
+    ],
+    "trip_id": "travel4u_TYO05KHH012",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "賞櫻人氣NO.1東西交融的皇家庭園【新宿御苑】",
+      "雲端俯瞰的東京天際線【澀谷展望台SHIBUYA SKY】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05KHH012/"
+  },
+  {
+    "edge_id": "E0092",
+    "from": {
+      "poi_id": "P004",
+      "poi_name": "忍野八海",
+      "name_raw": "日本百選名水 忍野八海",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P010",
+      "poi_name": "大石公園",
+      "name_raw": "大石公園",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05P5888R",
+    "day": 2,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "富士山下 新富岳百景【日本百選名水 忍野八海】",
+      "河口湖四季絕景花街道【大石公園】春櫻、紫夏薰衣草、秋楓、逆富士雪景"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05P5888R/"
+  },
+  {
+    "edge_id": "E0093",
+    "from": {
+      "poi_id": "P010",
+      "poi_name": "大石公園",
+      "name_raw": "大石公園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P005",
+      "poi_name": "御殿場 PREMIUM OUTLETS",
+      "name_raw": "御殿場 PREMIUM OUTLETS",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [
+      "特別安排★鮮採季節水果"
+    ],
+    "months": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05P5888R",
+    "day": 2,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "河口湖四季絕景花街道【大石公園】春櫻、紫夏薰衣草、秋楓、逆富士雪景",
+      "絕美富士山【御殿場 PREMIUM OUTLETS】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05P5888R/"
+  },
+  {
+    "edge_id": "E0094",
+    "from": {
+      "poi_id": "P054",
+      "poi_name": "鶴岡八幡宮",
+      "name_raw": "鶴岡八幡宮",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P055",
+      "poi_name": "鶴岡八幡小町通",
+      "name_raw": "鶴岡八幡小町通",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05P5888R",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "日本三大八幡宮【鶴岡八幡宮】打卡酒甕牆",
+      "【鶴岡八幡小町通】鎌倉古街散策"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05P5888R/"
+  },
+  {
+    "edge_id": "E0095",
+    "from": {
+      "poi_id": "P055",
+      "poi_name": "鶴岡八幡小町通",
+      "name_raw": "鶴岡八幡小町通",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P066",
+      "poi_name": "江之島神社",
+      "name_raw": "江島神社",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05P5888R",
+    "day": 3,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "【鶴岡八幡小町通】鎌倉古街散策",
+      "掌管財富、海運與藝能的日本三大弁財天【江島神社】特別安排搭乘★日本第一座戶外電扶梯~輕鬆攻頂江之島~探索江島神社與眺望壯麗海景"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05P5888R/"
+  },
+  {
+    "edge_id": "E0096",
+    "from": {
+      "poi_id": "P066",
+      "poi_name": "江之島神社",
+      "name_raw": "江島神社",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P088",
+      "poi_name": "弁才天仲見世通",
+      "name_raw": "弁才天仲見世通 參拜道商店街自由散策",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05P5888R",
+    "day": 3,
+    "seq": 3,
+    "source_type": "旅行社",
+    "evidence": [
+      "掌管財富、海運與藝能的日本三大弁財天【江島神社】特別安排搭乘★日本第一座戶外電扶梯~輕鬆攻頂江之島~探索江島神社與眺望壯麗海景",
+      "弁才天仲見世通 參拜道商店街自由散策"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05P5888R/"
+  },
+  {
+    "edge_id": "E0097",
+    "from": {
+      "poi_id": "P088",
+      "poi_name": "弁才天仲見世通",
+      "name_raw": "弁才天仲見世通 參拜道商店街自由散策",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P053",
+      "poi_name": "新橫濱拉麵博物館",
+      "name_raw": "新橫濱拉麵博物館",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO05P5888R",
+    "day": 3,
+    "seq": 4,
+    "source_type": "旅行社",
+    "evidence": [
+      "弁才天仲見世通 參拜道商店街自由散策",
+      "一秒掉進昭和的拉麵宇宙【新橫濱拉麵博物館】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO05P5888R/"
+  },
+  {
+    "edge_id": "E0098",
+    "from": {
+      "poi_id": "P020",
+      "poi_name": "東京晴空塔",
+      "name_raw": "東京晴空塔SKYTREE~特別安排★350M展望台天望甲板入內參觀",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P089",
+      "poi_name": "晴空塔寶可夢中心",
+      "name_raw": "晴空塔寶可夢中心Pokemon Center SKYTREE TOWN",
+      "visit_type": null
+    },
+    "mode": "走路",
+    "mode_inferred": true,
+    "mode_basis": "同園區／步行範圍內（人工規則）",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO06RMQ3",
+    "day": 2,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "東京晴空塔SKYTREE~特別安排★350M展望台天望甲板入內參觀",
+      "晴空塔寶可夢中心Pokemon Center SKYTREE TOWN"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO06RMQ3/"
+  },
+  {
+    "edge_id": "E0099",
+    "from": {
+      "poi_id": "P089",
+      "poi_name": "晴空塔寶可夢中心",
+      "name_raw": "晴空塔寶可夢中心Pokemon Center SKYTREE TOWN",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P090",
+      "poi_name": "橫濱空中纜車YOKOHAMA AIR CABIN",
+      "name_raw": "橫濱空中纜車YOKOHAMA AIR CABIN(單程)",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO06RMQ3",
+    "day": 2,
+    "seq": 2,
+    "source_type": "旅行社",
+    "evidence": [
+      "晴空塔寶可夢中心Pokemon Center SKYTREE TOWN",
+      "世界上最先進都市型空中循環纜車【橫濱空中纜車YOKOHAMA AIR CABIN(單程)】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO06RMQ3/"
+  },
+  {
+    "edge_id": "E0100",
+    "from": {
+      "poi_id": "P010",
+      "poi_name": "大石公園",
+      "name_raw": "大石公園",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P091",
+      "poi_name": "富士野生動物園",
+      "name_raw": "富士野生動物園",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [
+      "特別安排★鮮採季節水果"
+    ],
+    "months": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO06RMQ3",
+    "day": 3,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "河口湖四季絕景花街道【大石公園】春櫻、紫夏薰衣草、秋楓、逆富士雪景",
+      "富士山下的野生動物樂園【富士野生動物園】特別安排★叢林巴士體驗近距離猛獸餵食"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO06RMQ3/"
+  },
+  {
+    "edge_id": "E0101",
+    "from": {
+      "poi_id": "P092",
+      "poi_name": "河口湖富士山瞭望纜車",
+      "name_raw": "河口湖 富士山瞭望纜車",
+      "visit_type": null
+    },
+    "to": {
+      "poi_id": "P005",
+      "poi_name": "御殿場 PREMIUM OUTLETS",
+      "name_raw": "御殿場 PREMIUM OUTLETS",
+      "visit_type": null
+    },
+    "mode": "自駕",
+    "mode_inferred": true,
+    "mode_basis": "旅行社跟團，原文未寫交通方式，預設遊覽車",
+    "vehicle": null,
+    "duration_min": null,
+    "distance_km": null,
+    "via": [],
+    "months": [
+      1,
+      2,
+      3,
+      10,
+      11,
+      12
+    ],
+    "trip_id": "travel4u_TYO06RMQ3",
+    "day": 4,
+    "seq": 1,
+    "source_type": "旅行社",
+    "evidence": [
+      "制高點眺望富士山全景【河口湖 富士山瞭望纜車】天上山公園~無敵展望台富士山風景~貍貓茶屋~兔子神社",
+      "絕美富士山【御殿場 PREMIUM OUTLETS】"
+    ],
+    "url": "https://www.travel4u.com.tw/group/itinerary/TYO06RMQ3/"
+  }
+]
