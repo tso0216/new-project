@@ -15,19 +15,17 @@ def _path(name: str, default: str) -> Path:
 
 
 
-# LLM（Vercel AI Gateway）
-AI_GATEWAY_API_KEY = os.getenv("OPEN_AI_API_KEY")
-LLM_BASE_URL ="https://api.openai.com/v1" 
-# openai : "https://api.openai.com/v1"
-# vercel : "https://ai-gateway.vercel.sh/v1"
+# LLM（OpenAI）
+OPENAI_API_KEY = os.getenv("OPEN_AI_API_KEY")
+LLM_BASE_URL = "https://api.openai.com/v1"
 LLM_MODEL = "gpt-6-luna"
 LLM_MAX_TOKENS = 16000
+LLM_MANUAL = False
+# 推理強度：none / low / medium / high / xhigh / max
+LLM_REASONING_EFFORT = "medium"
 
 # Embedding
 EMBED_MODEL = "BAAI/bge-base-zh-v1.5"
-
-# Google Places（抽取時查 POI 的 place_id、座標、營業時間）
-GOOGLE_PLACES_API_KEY = os.getenv("GOOGLE_PLACES_API_KEY")
 
 # Chroma
 CHROMA_DIR = _path("CHROMA_DIR", "storage/chroma")
