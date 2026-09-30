@@ -4,9 +4,10 @@ import asyncio
 import html
 import re
 import sqlite3
-import httpx
 from bs4 import BeautifulSoup
 from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator
+from curl_cffi.requests import AsyncSession
+from curl_cffi.requests.exceptions import HTTPError, RequestException
 
 from config import config
 
@@ -21,13 +22,9 @@ RETRY_BASE_WAIT = 10  # 秒，每次重試等待時間加倍：10、20、40
 RETRYABLE_STATUS = {429, 500, 502, 503, 504}
 
 _markdown_generator = DefaultMarkdownGenerator()
-_HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-    ),
-    "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.8",
-}
+# User-Agent 由 impersonate 自動帶入，與模擬的 Chrome 版本一致，不要自己覆蓋
+IMPERSONATE = "chrome"  # 模擬 Chrome 的 TLS/JA3 指紋與 HTTP/2 握手
+_HEADERS = {"Accept-Language": "zh-TW,zh;q=0.9,en;q=0.8"}
 
 
 def init_db() -> sqlite3.Connection:
@@ -67,7 +64,7 @@ def _cap(total: int, limit: int | None) -> int:
     return total if limit is None else min(total, limit)
 
 
-async def fetch_text(client: httpx.AsyncClient, url: str) -> str:
+async def fetch_text(client: AsyncSession, url: str) -> str:
     """送出GET請求並回傳內容；逾時、連線失敗或伺服器忙碌時等待後重試。"""
     for attempt in range(1, REQUEST_RETRIES + 2):
         await asyncio.sleep(config.CRAWLER_REQUEST_DELAY)
@@ -75,8 +72,8 @@ async def fetch_text(client: httpx.AsyncClient, url: str) -> str:
             response = await client.get(url)
             response.raise_for_status()
             return response.text
-        except (httpx.TransportError, httpx.HTTPStatusError) as e:
-            retryable = isinstance(e, httpx.TransportError) or e.response.status_code in RETRYABLE_STATUS
+        except RequestException as e:
+            retryable = not isinstance(e, HTTPError) or e.response.status_code in RETRYABLE_STATUS
             if not retryable or attempt > REQUEST_RETRIES:
                 raise
             wait = RETRY_BASE_WAIT * 2 ** (attempt - 1)
@@ -116,7 +113,7 @@ def extract_total_pages(thread_page_html: str) -> int:
 
 
 async def fetch_thread_markdown(
-    client: httpx.AsyncClient, url: str, max_reply_pages: int | None
+    client: AsyncSession, url: str, max_reply_pages: int | None
 ) -> str:
     """抓取一篇文章的樓主原文與留言分頁(最多 max_reply_pages 頁)，合併成一份markdown。"""
     first_page = await fetch_text(client, url)
@@ -136,7 +133,7 @@ async def fetch_thread_markdown(
 
 
 async def crawl_list_pages(
-    client: httpx.AsyncClient,
+    client: AsyncSession,
     conn: sqlite3.Connection,
     worker: int,
     list_pages: range,
@@ -191,7 +188,13 @@ async def crawl_forum(
 
     conn = init_db()
     try:
-        async with httpx.AsyncClient(headers=_HEADERS, timeout=config.CRAWLER_TIMEOUT) as client:
+        async with AsyncSession(
+            impersonate=IMPERSONATE,
+            headers=_HEADERS,
+            timeout=config.CRAWLER_TIMEOUT,
+            proxy=config.CRAWLER_PROXY,
+            max_clients=workers,
+        ) as client:
             total_pages = extract_listing_total_pages(await fetch_text(client, list_page_url(1)))
             end_page = total_pages if max_list_pages is None else min(total_pages, start_list_page + max_list_pages - 1)
             print(f"列表共 {total_pages} 頁，這次爬第 {start_list_page}～{end_page} 頁，{workers} 個工作者同時進行")
@@ -204,7 +207,7 @@ async def crawl_forum(
                     tg.create_task(
                         crawl_list_pages(client, conn, i + 1, pages, seen, max_articles, max_reply_pages, on_existing)
                     )
-    except* (httpx.TransportError, httpx.HTTPStatusError) as eg:
+    except* RequestException as eg:
         print(
             f"連線一直失敗，已停止爬取（{type(eg.exceptions[0]).__name__}）。\n"
             "已經存進資料庫的文章都會保留；把 CRAWLER_START_LIST_PAGE 設成還沒完成的最小列表頁，用 skip 模式重跑即可。"

@@ -5,7 +5,7 @@ import html
 import re
 import sqlite3
 
-import httpx
+from curl_cffi.requests import AsyncSession
 
 from config import config
 
@@ -16,13 +16,9 @@ FORUM_LIST_URL = f"{BASE_URL}forumdisplay.php?f={config.CRAWLER_FORUM_ID}{_prefi
 DB_PATH = config.CRAWLER_FULL_DB_PATH
 ON_EXISTING_OPTIONS = ("skip", "update")
 
-_HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
-    ),
-    "Accept-Language": "zh-TW,zh;q=0.9,en;q=0.8",
-}
+# User-Agent 由 impersonate 自動帶入，與模擬的 Chrome 版本一致，不要自己覆蓋
+IMPERSONATE = "chrome"  # 模擬 Chrome 的 TLS/JA3 指紋與 HTTP/2 握手
+_HEADERS = {"Accept-Language": "zh-TW,zh;q=0.9,en;q=0.8"}
 
 
 def init_db() -> sqlite3.Connection:
@@ -66,7 +62,7 @@ def _cap(total: int, limit: int | None) -> int:
 
 
 async def collect_thread_ids(
-    client: httpx.AsyncClient, max_articles: int | None, max_list_pages: int | None
+    client: AsyncSession, max_articles: int | None, max_list_pages: int | None
 ) -> list[int]:
     """依序翻頁版面列表，蒐集不重複的文章ID，達到文章數或列表頁數上限就停止。"""
     seen: set[int] = set()
@@ -109,7 +105,7 @@ def extract_total_pages(thread_page_html: str) -> int:
 
 
 async def fetch_thread_pages(
-    client: httpx.AsyncClient, thread_id: int, max_reply_pages: int | None
+    client: AsyncSession, thread_id: int, max_reply_pages: int | None
 ) -> list[tuple[int, str, str]]:
     """抓取一篇文章每個分頁(最多 max_reply_pages 頁)的完整原始HTML，回傳 (頁碼, 網址, HTML)。"""
     pages = []
@@ -137,7 +133,9 @@ async def crawl_forum(
 
     conn = init_db()
     try:
-        async with httpx.AsyncClient(headers=_HEADERS, timeout=config.CRAWLER_TIMEOUT) as client:
+        async with AsyncSession(
+            impersonate=IMPERSONATE, headers=_HEADERS, timeout=config.CRAWLER_TIMEOUT, proxy=config.CRAWLER_PROXY
+        ) as client:
             thread_ids = await collect_thread_ids(client, max_articles, max_list_pages)
             print(f"抓到 {len(thread_ids)} 篇文章ID")
 
