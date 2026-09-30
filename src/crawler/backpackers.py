@@ -1,7 +1,8 @@
-"""爬取背包客棧指定版面(與分類)的文章，將原文與留言轉成markdown存進SQLite。版面、分類等參數見 config/config.py。"""
+"""爬取背包客棧指定版面(與分類)的文章，將原文與留言轉成markdown存進SQLite。版面、分類等參數見 config/crawl_config.py。"""
 
 import asyncio
 import html
+import random
 import re
 import sqlite3
 from bs4 import BeautifulSoup
@@ -9,7 +10,7 @@ from crawl4ai.markdown_generation_strategy import DefaultMarkdownGenerator
 from curl_cffi.requests import AsyncSession
 from curl_cffi.requests.exceptions import HTTPError, RequestException
 
-from config import config
+from config import crawl_config as config
 
 BASE_URL = "https://www.backpackers.com.tw/forum/"
 _prefix_query = f"&prefixid={config.CRAWLER_PREFIX_ID}" if config.CRAWLER_PREFIX_ID else ""
@@ -67,7 +68,7 @@ def _cap(total: int, limit: int | None) -> int:
 async def fetch_text(client: AsyncSession, url: str) -> str:
     """送出GET請求並回傳內容；逾時、連線失敗或伺服器忙碌時等待後重試。"""
     for attempt in range(1, REQUEST_RETRIES + 2):
-        await asyncio.sleep(config.CRAWLER_REQUEST_DELAY)
+        await asyncio.sleep(random.uniform(config.CRAWLER_REQUEST_DELAY_MIN, config.CRAWLER_REQUEST_DELAY_MAX))
         try:
             response = await client.get(url)
             response.raise_for_status()
