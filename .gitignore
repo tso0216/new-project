@@ -3,5 +3,4 @@ __pycache__/
 storage/
 config/.env
 claude.md
-test/test_extract.db
 
