@@ -4,8 +4,8 @@ from .config import _path
 
 CRAWLER_FORUM_ID = 43            # 版面ID（43 = 日本關東）
 CRAWLER_PREFIX_ID = "transport"  # 分類（transport = 交通；None = 不篩選分類）
-CRAWLER_MAX_ARTICLES = 10000    # 文章要查幾篇（None = 不限制）
-CRAWLER_START_LIST_PAGE = 290     # 從文章列表第幾頁開始（1～29頁已爬完）
+CRAWLER_MAX_ARTICLES = 20000    # 文章要查幾篇（None = 不限制）
+CRAWLER_START_LIST_PAGE = 1     # 從文章列表第幾頁開始（1～29頁已爬完）
 CRAWLER_MAX_LIST_PAGES = None    # 文章列表要查幾頁，從起始頁算起（None = 不限制）
 CRAWLER_WORKERS = 8              # 同時爬幾個列表頁；第1個負責起始頁+0、+5、+10…，第2個負責+1、+6、+11…，以此類推
 CRAWLER_MAX_REPLY_PAGES = None   # 每篇文章的留言要抓幾頁，第1頁含原文（None = 不限制）
